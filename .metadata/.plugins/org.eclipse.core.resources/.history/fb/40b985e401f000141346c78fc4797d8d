@@ -1,0 +1,146 @@
+/*
+* ParallelIO.s
+*
+* Created on: 11.03.2014
+* Author: Fabian Alexander Wilms 735162
+*
+*/
+
+//enthält alle Definitionen für den eingestellten Prozessor
+#include <avr/io.h>
+
+.file "myCode/ParallelIO.s"
+.text ; Programmsegment (ROM)
+
+; Funktionen nach außen bekannt machen
+.global initPorts_Ain_Bout
+.global putByteLED_B
+.global wait_ms
+.global wait4key_A
+
+.set CNT_WAITLOOPS, 5
+
+/*
+* Initialisierung der Ports A und B
+* PortA: Eingabe (Anschluss der Tasten)
+* PortB: Ausgabe (Anschluss der LEDs)
+*
+* Register:
+* lokal: r16 - Hilfsregister
+* Parameter: keine
+* Rückgabe: keine
+*/
+initPorts_Ain_Bout: ; alles puschn, was kein parameter ist, und verwendet wird
+	push r16 ; Inhalt von r16 retten
+	lds r16, SREG ; Inhalt des Flagregisters retten
+	push r16
+
+	ldi r16, 0x00	; A IN
+	sts DDRA, r16
+	ldi r16, 0xff	; Pull-Ups
+	sts PORTA, r16
+
+	ldi r16, 0xff	; B sts
+	sts DDRB, r16
+	ldi r16, 0xff	; HIGH => LEDs aus
+	sts PORTB, r16
+
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+	sts SREG, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+
+/*
+* Gibt ein Byte auf PortB und die daran angeschlossenen LEDs aus.
+* An Bit-Positionen mit dem Wert 1 soll die zugehörige LED leuchten.
+*
+* Register:
+* lokal: keine
+* Parameter: r24
+* Rückgabe: keine
+*/
+putByteLED_B:
+
+	com r24 ; Soll leuchten, wo eine 1 war
+	sts PORTB, r24
+	com r24 ; sonst Problem bei Aufgabe 1
+
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+
+/*
+* Lässt den Prozessor für eine angegebene Zeit im Bereich von etwa 0 bis 255 ms warten
+*
+* Register:
+* lokal: r24,r25,r26,r27
+* Parameter: r23
+* Rückgabe: keine
+*/
+wait_ms:
+	push r16 ; Inhalt von r16 retten
+	lds r16, SREG ; Inhalt des Flagregisters retten
+	push r16
+	push r24
+	push r25
+	push r26
+	push r27
+
+	call wait
+
+	pop r27
+	pop r26
+	pop r25
+	pop r24
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+	sts SREG, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+
+wait:
+	lds r27, SREG
+	mov r26, r23 	; wie oft soll der 16-Bitwert in r25:r24
+						; auf 0 heruntergezählt werden? (Wartezähler laden)
+next_wait:
+	ldi r24, 0xe8 		; lädt den Startwert der inneren Zählschleife -> 1 ms
+	ldi r25, 0x03
+
+wait_loop:
+	sbiw r24,1			; zähle 2 Byte-Zahl runter
+	brne wait_loop 		; wenn nicht bei 0, springt wieder zu wait_loop
+	
+	dec r26 			; wenn ja, dekrementiert den Wartezähler
+	brne next_wait 		; wenn nicht 0 => Sprung zum erneuten Herunterzählen
+						; des 16-Bit-Wertes
+	sts SREG, r27
+	ret 				; kehrt zum aufrufenden Programm zurück
+
+/*
+* Wartet auf eine Eingabe vom Benutzer über die an PortA angeschlossenen Tasten
+*
+* Register:
+* lokal: r16, r23 - Hilfsregister
+* Parameter: keine
+* Rückgabe: r22
+*/
+wait4key_A:
+	push r16 ; Inhalt von r16 retten
+	lds r16, SREG ; Inhalt des Flagregisters retten
+	push r16
+
+	wait_loop_key:
+		lds r16, PINA
+		cpi r16, 0xff ; nicht gedrückt?
+		brne wait_loop_key
+
+	lds r22, PINA ; Tastencode zurückgeben
+	ldi r23, 0x0a ; warte 10 ms
+	call wait_ms ; Absturz
+
+	wait4keyrelease:
+		lds r16, PINA
+		cpi r16, 0xff ; nicht gedrückt?
+		breq wait4keyrelease ; wenn nicht gedrückt, wiederhole & Aufgabe 2 blieb hier stecken
+
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+	sts SREG, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück

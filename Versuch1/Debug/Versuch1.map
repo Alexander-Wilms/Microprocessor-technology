@@ -1,0 +1,323 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./myCode/Main_VB.o
+LOAD ./myCode/ParallelIO.o
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000       0xd0
+ *(.vectors)
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000000000000000                . = ALIGN (0x2)
+                0x0000000000000000                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000000        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000000                __trampolines_end = .
+ *(.progmem*)
+                0x0000000000000000                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000000                __ctors_start = .
+ *(.ctors)
+                0x0000000000000000                __ctors_end = .
+                0x0000000000000000                __dtors_start = .
+ *(.dtors)
+                0x0000000000000000                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ *(.init9)
+ *(.text)
+ .text          0x0000000000000000       0x2a ./myCode/Main_VB.o
+ .text          0x000000000000002a       0xa6 ./myCode/ParallelIO.o
+                0x000000000000002a                initPorts_Ain_Bout
+                0x000000000000004c                putByteLED_B
+                0x0000000000000052                wait_ms
+                0x0000000000000078                wait
+                0x000000000000007e                next_wait
+                0x0000000000000082                wait_loop
+                0x0000000000000090                wait4key_A
+                0x0000000000000098                wait_loop_key
+                0x00000000000000d0                . = ALIGN (0x2)
+ *(.text.*)
+                0x00000000000000d0                . = ALIGN (0x2)
+ *(.fini9)
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ *(.fini0)
+                0x00000000000000d0                _etext = .
+
+.data           0x0000000000800060        0x0 load address 0x00000000000000d0
+                0x0000000000800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800060        0x0 ./myCode/Main_VB.o
+ .data          0x0000000000800060        0x0 ./myCode/ParallelIO.o
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0000000000800060                . = ALIGN (0x2)
+                0x0000000000800060                _edata = .
+                0x0000000000800060                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800060        0x0
+                0x0000000000800060                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800060        0x0 ./myCode/Main_VB.o
+ .bss           0x0000000000800060        0x0 ./myCode/ParallelIO.o
+ *(.bss*)
+ *(COMMON)
+                0x0000000000800060                PROVIDE (__bss_end, .)
+                0x00000000000000d0                __data_load_start = LOADADDR (.data)
+                0x00000000000000d0                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800060        0x0
+                0x0000000000800060                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0000000000800060                PROVIDE (__noinit_end, .)
+                0x0000000000800060                _end = .
+                0x0000000000800060                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000      0x408
+ *(.stab)
+ .stab          0x0000000000000000       0xc0 ./myCode/Main_VB.o
+ .stab          0x00000000000000c0      0x348 ./myCode/ParallelIO.o
+                                        0x354 (size before relaxing)
+
+.stabstr        0x0000000000000000       0x4c
+ *(.stabstr)
+ .stabstr       0x0000000000000000       0x4c ./myCode/Main_VB.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(Versuch1.elf elf32-avr)
+LOAD linker stubs

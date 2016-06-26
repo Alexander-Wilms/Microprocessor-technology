@@ -1,0 +1,59 @@
+#include <avr/io.h>
+
+.file "myCode/Main.s"
+.text	;Programmsegment (ROM)
+
+main:
+
+	; Initialisierung des Stack-Pointers
+	; Code für Initialisierung SP
+	
+	ldi r16,lo8 (RAMEND)
+	sts SPL,r16
+	ldi r16,hi8 (RAMEND)
+	sts SPH,r16
+	
+	call main_03	; hier jeweils das Unterprogramm der bearbeiteten Aufgabe aufrufen
+
+	; Zur Sicherheit, falls das main_0x versehentlich keine Endlosschleife enthält
+	donothing:
+		jmp donothing
+
+
+; hier folgt für jede der Aufgaben 1 bis 6 ein Unterprogramm nach dem folgenden Muster
+; (Retten lokaler Register und des Stack ist in main_0x nicht nötig)
+
+; Aufgabe 1
+main_01:
+	; Code mit der Lösung der Aufgabe
+	call initPorts_Ain_Bout ; Ports initialisieren mit LEDs aus (rote Schrift im Sim)
+	ldi r24, 0xff ; Alle LEDs an  (roter Hintergrund im Sim)
+	call putByteLED_B ; LEDs schalten
+	ldi r23, 0x64 ; 100 ms warten
+	call wait_ms
+		
+	loop_01:	
+		com r24 ; Bitweises invertieren
+		call putByteLED_B
+		ldi r23, 0x64 ; 100 ms warten
+		call wait_ms
+		jmp loop_01
+	ret
+
+; Aufgabe 2
+main_02:
+	; Code mit der Lösung der Aufgabe
+	call initPorts_Ain_Bout ; Ports initialisieren mit LEDs aus (rote Schrift im Sim)
+	call wait4key_A
+	mov r24, r22
+	call putByteLED_B
+	ret
+
+; Aufgabe 3
+main_03:
+	; Code mit der Lösung der Aufgabe
+	call initPorts_Ain_Bout ; Ports initialisieren mit LEDs aus (rote Schrift im Sim)
+	call wait4key_A
+	mov r24, r22
+	call putByteLED_B
+	ret

@@ -1,0 +1,42 @@
+00:58:28 **** Incremental Build of configuration Debug for project Versuch2_Laborbericht ****
+make all 
+Building file: ../myCode/adc.c
+Invoking: AVR Compiler
+avr-gcc -I/home/mit/MIT-workspace/libMIT/include -Wall -g3 -gstabs+ -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=4000000UL -MMD -MP -MF"myCode/adc.d" -MT"myCode/adc.d" -c -o "myCode/adc.o" "../myCode/adc.c"
+Finished building: ../myCode/adc.c
+ 
+Building target: Versuch2_Laborbericht.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Versuch2_Laborbericht.map -L/home/mit/MIT-workspace/Versuch2/libMIT -L/home/mit/MIT-workspace/libMIT -mmcu=atmega128 -o "Versuch2_Laborbericht.elf"  ./myCode/adc.o ./myCode/main-vorbereitung.o ./myCode/main.o   -lMIT
+Finished building target: Versuch2_Laborbericht.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Versuch2_Laborbericht.elf  >"Versuch2_Laborbericht.lss"
+Finished building: Versuch2_Laborbericht.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Versuch2_Laborbericht.elf  "Versuch2_Laborbericht.hex"
+Finished building: Versuch2_Laborbericht.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Versuch2_Laborbericht.elf  "Versuch2_Laborbericht.eep"
+Finished building: Versuch2_Laborbericht.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 Versuch2_Laborbericht.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:    4578 bytes (3.5% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:58:29 Build Finished (took 185ms)
+

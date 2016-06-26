@@ -1,0 +1,25 @@
+// Bindet ein h-File ein, in dem alle IO-Adressen und Konstanten
+// f?r den eingestellten Prozessor definiert sind z.B. DDRB, PORTB,
+// PIND, PIND3 (3. Bit im IO-Register PIND) etc.
+#include <avr/io.h>			// AVR header file for IO ports
+
+int main(void)
+{
+	void init_ADC();
+
+	eADCRUNMODE mode = FREERUN;
+	void start_ADC(mode)
+
+	void stop_ADC()
+
+	void wait_ADC()
+
+	unsigned short read_ADC(eADCRES res)
+
+	unsigned char ulong2bcd_unpk(unsigned long* value)
+
+	unsigned char ulong2bcd_pk(unsigned long value)
+
+	while (1) {
+	}
+}

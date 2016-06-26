@@ -1,0 +1,77 @@
+21:59:52 **** Build of configuration Debug for project Versuch2_Ende ****
+make all 
+Building file: ../myCode/adc.c
+Invoking: AVR Compiler
+avr-gcc -I/home/mit/MIT-workspace/Versuch2/libMIT/include -Wall -g3 -gstabs+ -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=4000000UL -MMD -MP -MF"myCode/adc.d" -MT"myCode/adc.d" -c -o "myCode/adc.o" "../myCode/adc.c"
+Finished building: ../myCode/adc.c
+ 
+Building file: ../myCode/main-vorbereitung.c
+Invoking: AVR Compiler
+avr-gcc -I/home/mit/MIT-workspace/Versuch2/libMIT/include -Wall -g3 -gstabs+ -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=4000000UL -MMD -MP -MF"myCode/main-vorbereitung.d" -MT"myCode/main-vorbereitung.d" -c -o "myCode/main-vorbereitung.o" "../myCode/main-vorbereitung.c"
+../myCode/main-vorbereitung.c: In function 'main_vorbereitung':
+../myCode/main-vorbereitung.c:50:16: warning: variable 'c3' set but not used [-Wunused-but-set-variable]
+  unsigned char c3;
+                ^
+../myCode/main-vorbereitung.c:47:16: warning: variable 'c2' set but not used [-Wunused-but-set-variable]
+  unsigned char c2;
+                ^
+../myCode/main-vorbereitung.c:43:16: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  unsigned char c;
+                ^
+../myCode/main-vorbereitung.c:40:16: warning: variable 'b2' set but not used [-Wunused-but-set-variable]
+  unsigned char b2;
+                ^
+../myCode/main-vorbereitung.c:34:16: warning: variable 'b' set but not used [-Wunused-but-set-variable]
+  unsigned char b;
+                ^
+../myCode/main-vorbereitung.c:25:17: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+  unsigned short result;
+                 ^
+Finished building: ../myCode/main-vorbereitung.c
+ 
+Building file: ../myCode/main.c
+Invoking: AVR Compiler
+avr-gcc -I/home/mit/MIT-workspace/Versuch2/libMIT/include -Wall -g3 -gstabs+ -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=4000000UL -MMD -MP -MF"myCode/main.d" -MT"myCode/main.d" -c -o "myCode/main.o" "../myCode/main.c"
+../myCode/main.c: In function 'main_01':
+../myCode/main.c:21:2: warning: implicit declaration of function 'MIT_initPorts_Ain_Bout' [-Wimplicit-function-declaration]
+  MIT_initPorts_Ain_Bout();
+  ^
+../myCode/main.c:34:3: warning: implicit declaration of function 'MIT_putByteLED_B' [-Wimplicit-function-declaration]
+   MIT_putByteLED_B(result);
+   ^
+../myCode/main.c: In function 'main_02':
+../myCode/main.c:57:3: warning: implicit declaration of function 'MIT_long2bar' [-Wimplicit-function-declaration]
+   unsigned char bar = MIT_long2bar((long)result,min,max);
+   ^
+../myCode/main.c: In function 'main_03':
+../myCode/main.c:67:3: warning: implicit declaration of function 'MIT_wait4key_A' [-Wimplicit-function-declaration]
+   if(MIT_wait4key_A()){ // Falls eine Taste gedr�ckt wurde...
+   ^
+../myCode/main.c:81:18: warning: unused variable 'result3_2' [-Wunused-variable]
+    unsigned char result3_2;
+                  ^
+../myCode/main.c: In function 'main_04':
+../myCode/main.c:122:3: warning: implicit declaration of function 'MIT_look4key_A' [-Wimplicit-function-declaration]
+   unsigned char keyport = MIT_look4key_A();
+   ^
+../myCode/main.c:123:3: warning: implicit declaration of function 'MIT_getKeyNum' [-Wimplicit-function-declaration]
+   unsigned int tn = MIT_getKeyNum(keyport);
+   ^
+../myCode/main.c:105:6: warning: variable 'dMode' set but not used [-Wunused-but-set-variable]
+  int dMode = 0;
+      ^
+../myCode/main.c:104:37: warning: typedef 'rMode' locally defined but not used [-Wunused-local-typedefs]
+  typedef enum {FREERUN, SINGLESHOT} rMode;
+                                     ^
+Finished building: ../myCode/main.c
+ 
+Building target: Versuch2_Ende.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Versuch2_Ende.map -L/home/mit/MIT-workspace/Versuch2/libMIT -mmcu=atmega128 -o "Versuch2_Ende.elf"  ./myCode/adc.o ./myCode/main-vorbereitung.o ./myCode/main.o   -lMIT
+/usr/bin/avr-ld: cannot find -lMIT
+collect2: error: ld returned 1 exit status
+makefile:51: die Regel für Ziel „Versuch2_Ende.elf“ scheiterte
+make: *** [Versuch2_Ende.elf] Fehler 1
+
+21:59:53 Build Finished (took 244ms)
+

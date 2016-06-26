@@ -1,0 +1,20 @@
+17:46:11 **** Build of configuration Debug for project V1_ParallelIO ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 V1_ParallelIO.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:     290 bytes (0.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:46:12 Build Finished (took 186ms)
+

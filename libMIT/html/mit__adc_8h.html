@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>libMIT-atmega32: include/mit_adc.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Erzeugt von Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">libMIT-atmega32&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectbrief">Library MIT-Labor, FB EIT, h_da</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('mit__adc_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namensbereiche</a> &#124;
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#typedef-members">Typdefinitionen</a> &#124;
+<a href="#enum-members">Aufzählungen</a> &#124;
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<div class="title">include/mit_adc.h-Dateireferenz</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für mit_adc.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="mit__adc_8h__incl.png" border="0" usemap="#include_2mit__adc_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält:</div>
+<div class="dyncontent">
+<div class="center"><img src="mit__adc_8h__dep__incl.png" border="0" usemap="#include_2mit__adc_8hdep" alt=""/></div>
+<map name="include_2mit__adc_8hdep" id="include_2mit__adc_8hdep">
+<area shape="rect" id="node3" href="lib_m_i_t_8h.html" title="include/libMIT.h" alt="" coords="5,160,120,189"/><area shape="rect" id="node5" href="mit___u_s_a_r_t_8h.html" title="include/mit_USART.h" alt="" coords="100,83,249,112"/><area shape="rect" id="node8" href="mit___u_s_a_r_t_8c.html" title="Versuch3/mit_USART.c" alt="" coords="144,160,307,189"/></map>
+</div>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namensbereiche</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_a_d_c.html">ADC</a></td></tr>
+
+<p><tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>AD Wandler (Versuch 2) </p>
+<br/></td></tr>
+</p>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#adb2789f3b28abc2884abc018b416a35e">UREFV</a>&#160;&#160;&#160;5.0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Spannungsreferenz für den AD Wandler.  <a href="#adb2789f3b28abc2884abc018b416a35e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a14bde809e3b5e7a64fc951914d7ad583">UREFWARN</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a57b4bcefb39ab2773717e209f4c4c153">UREFMV</a>&#160;&#160;&#160;UREFV*1000</td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typdefinitionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66">MIT_ADCRES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Auflösung des AD-Wandlers.  <a href="#a80bd7a36cbe815867c8655ede5c9154f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2a">MIT_ADCRUNMODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a4e5deaed5942d27c3ff8eff5abf6ac39">MIT_eADCRUNMODE</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Art der Messung.  <a href="#a4e5deaed5942d27c3ff8eff5abf6ac39"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189">MIT_ADCPRESC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a1567451bb83d4018610088fe6bff4fed">MIT_eADCPRESC</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prescaler für Wandlungsfrequenz.  <a href="#a1567451bb83d4018610088fe6bff4fed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0">MIT_ADCALIGN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#ac7956d2c2926dad7d0e0109fa563e2fe">MIT_eADCALIGN</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ausrichtung des 10 Bit Wandelergebnisses im 16-Bit Wort (Links-/Rechtsbündig)  <a href="#ac7956d2c2926dad7d0e0109fa563e2fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fe">MIT_ADCVREF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a86a7354f3c801447b1e6e5b80ff79070">MIT_eADCVREF</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quelle der Spannungsreferenz <em>(ist auch von Konfiguration des STK500 abhängig.)</em>  <a href="#a86a7354f3c801447b1e6e5b80ff79070"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22">MIT_ADCCHAN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#abbfa7bb12dc3b806f26c71b8d0715f27">MIT_eADCCHAN</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Kanalauswahl, Symmetrie, Verstärkung.  <a href="#abbfa7bb12dc3b806f26c71b8d0715f27"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66">MIT_ADCRES</a> { <a class="el" href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66a38fd1368c2a98ea1f0e18d969a850258">MIT_BIT10</a> = 0, 
+<a class="el" href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66ac8a7cf46dc37d900fe3493356ebcafd1">MIT_BIT8</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Auflösung des AD-Wandlers.  <a href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66">Mehr ...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2a">MIT_ADCRUNMODE</a> { <a class="el" href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2aa4fe24defde9e82ee13aa807100343ccc">MIT_FREERUN</a> = 0, 
+<a class="el" href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2aacdcddf54459e44bf611795828ccd4066">MIT_SINGLESHOT</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Art der Messung.  <a href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2a">Mehr ...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189">MIT_ADCPRESC</a> { <br/>
+&#160;&#160;<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189ae233abc253471324b9bc4c8ddf405a99">MIT_ADCPRESC1</a>, 
+<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189a48f389295a5a0646e27a9aeb78e51afe">MIT_ADCPRESC2</a>, 
+<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189afc9e912f2b0a97e6459d9c470f2efc09">MIT_ADCPRESC4</a>, 
+<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189a5ecd952d76698fabcd1f5250a8a9c17e">MIT_ADCPRESC8</a>, 
+<br/>
+&#160;&#160;<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189a228de991777d94a9fbee520f4a9027b4">MIT_ADCPRESC16</a>, 
+<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189a19e4c5e990fa0e3e83108b1a2fbdb420">MIT_ADCPRESC32</a>, 
+<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189a98cdaf99aea78c97dc94be8b52a4c244">MIT_ADCPRESC64</a>, 
+<a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189a0efc1aa4282a745805e8eda53f73134a">MIT_ADCPRESC128</a>
+<br/>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prescaler für Wandlungsfrequenz.  <a href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189">Mehr ...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0">MIT_ADCALIGN</a> { <a class="el" href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0a2b9f0ecbcf58905d658d6235b41a19b7">MIT_ADCRIGHT</a>, 
+<a class="el" href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0af37e96144f3a5a803e5e862f66509980">MIT_ADCLEFT</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ausrichtung des 10 Bit Wandelergebnisses im 16-Bit Wort (Links-/Rechtsbündig)  <a href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0">Mehr ...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fe">MIT_ADCVREF</a> { <a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5feaa7750eda50a6ba685bf4644555e86f58">MIT_AREF</a>, 
+<a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fea2e5c9019bc2e15482fe6204ca899b892">MIT_AVCC</a>, 
+<a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5feaff374542ea033ea0a75badc677fa0613">MIT_INTERN</a> = 3
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Quelle der Spannungsreferenz <em>(ist auch von Konfiguration des STK500 abhängig.)</em>  <a href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fe">Mehr ...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22">MIT_ADCCHAN</a> { <br/>
+&#160;&#160;<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a1d462f86a36b62c8c78af6d923f5dc01">MIT_ADC_CHN0SNGL</a>, 
+<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a287c76c133fdcda4cc6b161db60ef276">MIT_ADC_CHN1SNGL</a>, 
+<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a3281747e83c0e68847bbe8421f47b5fc">MIT_ADC_CHN2SNGL</a>, 
+<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a3db1be73ef070e1cc74da4b1fb24ff24">MIT_ADC_CHN3SNGL</a>, 
+<br/>
+&#160;&#160;<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a6da35366a9f67d54c557c01a9b35b4df">MIT_ADC_CHN4SNGL</a>, 
+<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a08b4f48b935988bd60b046c564b0f2b9">MIT_ADC_CHN5SNGL</a>, 
+<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a35ad8155adc327f47b974892307990f9">MIT_ADC_CHN6SNGL</a>, 
+<a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22a78db6323549f5faac63b30e1930257e8">MIT_ADC_CHN7SNGL</a>
+<br/>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Kanalauswahl, Symmetrie, Verstärkung.  <a href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22">Mehr ...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#afb501e126844f361958c21b287e61828">MIT_init_ADC</a> (<a class="el" href="mit__adc_8h.html#a86a7354f3c801447b1e6e5b80ff79070">MIT_eADCVREF</a> ref, <a class="el" href="mit__adc_8h.html#abbfa7bb12dc3b806f26c71b8d0715f27">MIT_eADCCHAN</a> channel, <a class="el" href="mit__adc_8h.html#ac7956d2c2926dad7d0e0109fa563e2fe">MIT_eADCALIGN</a> align, <a class="el" href="mit__adc_8h.html#a1567451bb83d4018610088fe6bff4fed">MIT_eADCPRESC</a> presc)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a>.  <a href="#afb501e126844f361958c21b287e61828"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a5cce95a41261a72b07cb4880cc564fcb">MIT_init_ADC_INT</a> (<a class="el" href="mit__adc_8h.html#a86a7354f3c801447b1e6e5b80ff79070">MIT_eADCVREF</a> ref, <a class="el" href="mit__adc_8h.html#abbfa7bb12dc3b806f26c71b8d0715f27">MIT_eADCCHAN</a> channel, <a class="el" href="mit__adc_8h.html#ac7956d2c2926dad7d0e0109fa563e2fe">MIT_eADCALIGN</a> align, <a class="el" href="mit__adc_8h.html#a1567451bb83d4018610088fe6bff4fed">MIT_eADCPRESC</a> presc)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> im Interrupt-Modus, verwendet init_ADC() zur Initialisierung.  <a href="#a5cce95a41261a72b07cb4880cc564fcb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a041d7991a883bf1e5d727926d5a54c10">MIT_start_ADC</a> (<a class="el" href="mit__adc_8h.html#a4e5deaed5942d27c3ff8eff5abf6ac39">MIT_eADCRUNMODE</a> mode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> in folgenden Modi:  <a href="#a041d7991a883bf1e5d727926d5a54c10"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#aea6053b71e71c210129f844bfef6776d">MIT_stop_ADC</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">stoppt den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a>  <a href="#aea6053b71e71c210129f844bfef6776d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#af540c16dd7bb736898cfbe6415f4abe9">MIT_wait_ADC</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">wartet auf das Ende einer Messung (Polling)  <a href="#af540c16dd7bb736898cfbe6415f4abe9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a7dc092e73530ebf239685fca51d4309f">MIT_read_ADC</a> (<a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a> res)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">liefert ein Messergebnis (binär) mit 8 oder 10 Bit Auflösung aus  <a href="#a7dc092e73530ebf239685fca51d4309f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#aa8282116d4785481cc29d46ff6e55a12">MIT_ushort2Volt</a> (unsigned short value, <a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a> res, float uref)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">rechnet ein binäres Wandlungsergebnis in einen Spannungswert um  <a href="#aa8282116d4785481cc29d46ff6e55a12"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a972840836bee69234cc76f44e2322010">MIT_ushort2VoltInt</a> (unsigned short value, <a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a> res, unsigned int uref)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">rechnet ein binäres Wandlungsergebnis in einen 4-stelligen Spannungswert in mV um  <a href="#a972840836bee69234cc76f44e2322010"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit__adc_8h.html#a544fe7d06b38fbc0aa415ffd52cf1739">MIT_gADCres</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ergebnis der Wandlung bei interruptgesteuertem <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a>.  <a href="#a544fe7d06b38fbc0aa415ffd52cf1739"></a><br/></td></tr>
+</table>
+<hr/><h2>Makro-Dokumentation</h2>
+<a class="anchor" id="a57b4bcefb39ab2773717e209f4c4c153"></a><!-- doxytag: member="mit_adc.h::UREFMV" ref="a57b4bcefb39ab2773717e209f4c4c153" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UREFMV&#160;&#160;&#160;UREFV*1000</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb2789f3b28abc2884abc018b416a35e"></a><!-- doxytag: member="mit_adc.h::UREFV" ref="adb2789f3b28abc2884abc018b416a35e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UREFV&#160;&#160;&#160;5.0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Spannungsreferenz für den AD Wandler. </p>
+<p>Zur Skalierung der digitalen Messwerte des AD-Wandlers in Spannungswerte mit den Funktionen <a class="el" href="mit__adc_8h.html#aa8282116d4785481cc29d46ff6e55a12" title="rechnet ein binäres Wandlungsergebnis in einen Spannungswert um">MIT_ushort2Volt()</a> und <a class="el" href="mit__adc_8h.html#a972840836bee69234cc76f44e2322010" title="rechnet ein binäres Wandlungsergebnis in einen 4-stelligen Spannungswert in mV um">MIT_ushort2VoltInt()</a>, muss der Wert für die Referenzspannung des Wandlers bekannt sein.</p>
+<p>Die Referenzspannung ist von der Hardware- und Softwarekonfiguration des STK500/501 abhängig. Sie muss vor Einsatz eines Systems immer neu überprüft und ggf. eingestellt werden.</p>
+<p>Der Wert für das jeweilige eingesetzte System muss in der Konstanten UREFV in Volt als Dezimalzahl angegeben werden (z.B. 5. oder 5.0 für 5 Volt) und kann dann in der Anwendung an <a class="el" href="mit__adc_8h.html#aa8282116d4785481cc29d46ff6e55a12" title="rechnet ein binäres Wandlungsergebnis in einen Spannungswert um">MIT_ushort2Volt()</a> als Parameter übergeben werden.</p>
+<p><a class="el" href="mit__adc_8h.html#a972840836bee69234cc76f44e2322010" title="rechnet ein binäres Wandlungsergebnis in einen 4-stelligen Spannungswert in mV um">MIT_ushort2VoltInt()</a> benötigt einen Integerwert in mV. Dieser wird in Abhängigkeit von UREFV berechnet und in UREFMV zur Verfügung gestellt.</p>
+<p>UREFV muss vor Inklusion von <code><a class="el" href="lib_m_i_t_8h.html">libMIT.h</a></code> bzw. <code><a class="el" href="mit__adc_8h.html">mit_adc.h</a></code> festgelegt werden, sonst wird UREFMV nicht korrekt berechnet. Wenn der Wert nicht von der Anwendung gesetzt wird, wird eine Warnung ausgegeben und der Wert auf 5V gesetzt.</p>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fe" title="Quelle der Spannungsreferenz (ist auch von Konfiguration des STK500 abhängig.)">MIT_ADCVREF</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a14bde809e3b5e7a64fc951914d7ad583"></a><!-- doxytag: member="mit_adc.h::UREFWARN" ref="a14bde809e3b5e7a64fc951914d7ad583" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UREFWARN</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Dokumentation der benutzerdefinierten Typen</h2>
+<a class="anchor" id="ac7956d2c2926dad7d0e0109fa563e2fe"></a><!-- doxytag: member="mit_adc.h::MIT_eADCALIGN" ref="ac7956d2c2926dad7d0e0109fa563e2fe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0">MIT_ADCALIGN</a>  <a class="el" href="mit__adc_8h.html#ac7956d2c2926dad7d0e0109fa563e2fe">MIT_eADCALIGN</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ausrichtung des 10 Bit Wandelergebnisses im 16-Bit Wort (Links-/Rechtsbündig) </p>
+
+</div>
+</div>
+<a class="anchor" id="abbfa7bb12dc3b806f26c71b8d0715f27"></a><!-- doxytag: member="mit_adc.h::MIT_eADCCHAN" ref="abbfa7bb12dc3b806f26c71b8d0715f27" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22">MIT_ADCCHAN</a>  <a class="el" href="mit__adc_8h.html#abbfa7bb12dc3b806f26c71b8d0715f27">MIT_eADCCHAN</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kanalauswahl, Symmetrie, Verstärkung. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1567451bb83d4018610088fe6bff4fed"></a><!-- doxytag: member="mit_adc.h::MIT_eADCPRESC" ref="a1567451bb83d4018610088fe6bff4fed" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189">MIT_ADCPRESC</a>  <a class="el" href="mit__adc_8h.html#a1567451bb83d4018610088fe6bff4fed">MIT_eADCPRESC</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prescaler für Wandlungsfrequenz. </p>
+<p>Teilt die Systemfrequenz um den angegebenen Faktor; Ergibt Wandlungsclock Die eigentliche Abtastrate ist nochmal um den Faktor 13 niedriger, da für eine vollständige Wandlung 13 Clocks benötigt werden.</p>
+<p>Wird MIT_ADCPRESC1 angegeben, so erhält man ebenfalls einen Prescalerwert von 2. </p>
+
+</div>
+</div>
+<a class="anchor" id="a80bd7a36cbe815867c8655ede5c9154f"></a><!-- doxytag: member="mit_adc.h::MIT_eADCRES" ref="a80bd7a36cbe815867c8655ede5c9154f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66">MIT_ADCRES</a>  <a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Auflösung des AD-Wandlers. </p>
+<p>Es werden immer 10 Bit gewandelt. Bei <code>MIT_BIT8</code> werden die beiden niederwertigsten Bits (0 und 1) nicht berücksichtigt </p>
+
+</div>
+</div>
+<a class="anchor" id="a4e5deaed5942d27c3ff8eff5abf6ac39"></a><!-- doxytag: member="mit_adc.h::MIT_eADCRUNMODE" ref="a4e5deaed5942d27c3ff8eff5abf6ac39" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2a">MIT_ADCRUNMODE</a>  <a class="el" href="mit__adc_8h.html#a4e5deaed5942d27c3ff8eff5abf6ac39">MIT_eADCRUNMODE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Art der Messung. </p>
+<p>Free Run: Der Wandler startet eine neue Messung, sobald die vorherige Messung abgeschlossen ist.</p>
+<p>Single Shot: Jede Wandlung muß durch Setzen des ADSC-Bits in ADCSRA mit Aufruf von <code><a class="el" href="mit__adc_8h.html#a041d7991a883bf1e5d727926d5a54c10" title="Startet den ADC in folgenden Modi:">MIT_start_ADC()</a></code>) gestartet werden </p>
+
+</div>
+</div>
+<a class="anchor" id="a86a7354f3c801447b1e6e5b80ff79070"></a><!-- doxytag: member="mit_adc.h::MIT_eADCVREF" ref="a86a7354f3c801447b1e6e5b80ff79070" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fe">MIT_ADCVREF</a>  <a class="el" href="mit__adc_8h.html#a86a7354f3c801447b1e6e5b80ff79070">MIT_eADCVREF</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quelle der Spannungsreferenz <em>(ist auch von Konfiguration des STK500 abhängig.)</em> </p>
+<ul>
+<li><b>AREF:</b> von AREF-Pin; Bei gesetztem Jumper AREF auf dem STK500, wird die Referenzspannung vom STK500 erzeugt und an AREF angelegt. Die Höhe der Referenzspannung kann nur mit dem AVRSTudio eingestellt werden, nicht mit Eclipse. Ist der Jumper nicht gesetzt, muß die Referenzspannung über PORTE Pin 5 zugeführt werden. Sie darf nicht über der Versorgungsspannung liegen.</li>
+<li><b>AVCC:</b> als Referenzspannung wird die Versorgungsspannung verwendet. An AREF muß ein Kondensator angeschlossen werden</li>
+<li><b>INTERN:</b> interne Referenzspannung mit Kondensator an AREF</li>
+</ul>
+<dl class="warning"><dt><b>Warnung:</b></dt><dd>Wenn eine externe Referenzspannungsquelle an AREF angeschlossen ist, dürfen die Modi <b>AVCC</b> und <b>INTERN</b> nicht verwendet werden, da sonst der AREF-Pin über die externe Quelle kurzgeschlossen wird.</dd></dl>
+<p>Überprüfung der eingestellten Spannung vom STK500:</p>
+<ul>
+<li>AVR Studio 4 öffnen</li>
+<li>Tools - Program AVR - Auto Connect</li>
+<li>HW Settings </li>
+</ul>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Aufzählungstypen</h2>
+<a class="anchor" id="a2f4b40bada9dad8a77048b4ffb8be6d0"></a><!-- doxytag: member="mit_adc.h::MIT_ADCALIGN" ref="a2f4b40bada9dad8a77048b4ffb8be6d0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit__adc_8h.html#a2f4b40bada9dad8a77048b4ffb8be6d0">MIT_ADCALIGN</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ausrichtung des 10 Bit Wandelergebnisses im 16-Bit Wort (Links-/Rechtsbündig) </p>
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a2f4b40bada9dad8a77048b4ffb8be6d0a2b9f0ecbcf58905d658d6235b41a19b7"></a><!-- doxytag: member="MIT_ADCRIGHT" ref="a2f4b40bada9dad8a77048b4ffb8be6d0a2b9f0ecbcf58905d658d6235b41a19b7" args="" -->MIT_ADCRIGHT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a2f4b40bada9dad8a77048b4ffb8be6d0af37e96144f3a5a803e5e862f66509980"></a><!-- doxytag: member="MIT_ADCLEFT" ref="a2f4b40bada9dad8a77048b4ffb8be6d0af37e96144f3a5a803e5e862f66509980" args="" -->MIT_ADCLEFT</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22"></a><!-- doxytag: member="mit_adc.h::MIT_ADCCHAN" ref="a91552a7deb6eff4618a0af9f02c36a22" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit__adc_8h.html#a91552a7deb6eff4618a0af9f02c36a22">MIT_ADCCHAN</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Kanalauswahl, Symmetrie, Verstärkung. </p>
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a1d462f86a36b62c8c78af6d923f5dc01"></a><!-- doxytag: member="MIT_ADC_CHN0SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a1d462f86a36b62c8c78af6d923f5dc01" args="" -->MIT_ADC_CHN0SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a287c76c133fdcda4cc6b161db60ef276"></a><!-- doxytag: member="MIT_ADC_CHN1SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a287c76c133fdcda4cc6b161db60ef276" args="" -->MIT_ADC_CHN1SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a3281747e83c0e68847bbe8421f47b5fc"></a><!-- doxytag: member="MIT_ADC_CHN2SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a3281747e83c0e68847bbe8421f47b5fc" args="" -->MIT_ADC_CHN2SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a3db1be73ef070e1cc74da4b1fb24ff24"></a><!-- doxytag: member="MIT_ADC_CHN3SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a3db1be73ef070e1cc74da4b1fb24ff24" args="" -->MIT_ADC_CHN3SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a6da35366a9f67d54c557c01a9b35b4df"></a><!-- doxytag: member="MIT_ADC_CHN4SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a6da35366a9f67d54c557c01a9b35b4df" args="" -->MIT_ADC_CHN4SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a08b4f48b935988bd60b046c564b0f2b9"></a><!-- doxytag: member="MIT_ADC_CHN5SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a08b4f48b935988bd60b046c564b0f2b9" args="" -->MIT_ADC_CHN5SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a35ad8155adc327f47b974892307990f9"></a><!-- doxytag: member="MIT_ADC_CHN6SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a35ad8155adc327f47b974892307990f9" args="" -->MIT_ADC_CHN6SNGL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a91552a7deb6eff4618a0af9f02c36a22a78db6323549f5faac63b30e1930257e8"></a><!-- doxytag: member="MIT_ADC_CHN7SNGL" ref="a91552a7deb6eff4618a0af9f02c36a22a78db6323549f5faac63b30e1930257e8" args="" -->MIT_ADC_CHN7SNGL</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189"></a><!-- doxytag: member="mit_adc.h::MIT_ADCPRESC" ref="a26bf63e64e63ab34b2c66d6fcdbba189" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit__adc_8h.html#a26bf63e64e63ab34b2c66d6fcdbba189">MIT_ADCPRESC</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prescaler für Wandlungsfrequenz. </p>
+<p>Teilt die Systemfrequenz um den angegebenen Faktor; Ergibt Wandlungsclock Die eigentliche Abtastrate ist nochmal um den Faktor 13 niedriger, da für eine vollständige Wandlung 13 Clocks benötigt werden.</p>
+<p>Wird MIT_ADCPRESC1 angegeben, so erhält man ebenfalls einen Prescalerwert von 2. </p>
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189ae233abc253471324b9bc4c8ddf405a99"></a><!-- doxytag: member="MIT_ADCPRESC1" ref="a26bf63e64e63ab34b2c66d6fcdbba189ae233abc253471324b9bc4c8ddf405a99" args="" -->MIT_ADCPRESC1</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189a48f389295a5a0646e27a9aeb78e51afe"></a><!-- doxytag: member="MIT_ADCPRESC2" ref="a26bf63e64e63ab34b2c66d6fcdbba189a48f389295a5a0646e27a9aeb78e51afe" args="" -->MIT_ADCPRESC2</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189afc9e912f2b0a97e6459d9c470f2efc09"></a><!-- doxytag: member="MIT_ADCPRESC4" ref="a26bf63e64e63ab34b2c66d6fcdbba189afc9e912f2b0a97e6459d9c470f2efc09" args="" -->MIT_ADCPRESC4</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189a5ecd952d76698fabcd1f5250a8a9c17e"></a><!-- doxytag: member="MIT_ADCPRESC8" ref="a26bf63e64e63ab34b2c66d6fcdbba189a5ecd952d76698fabcd1f5250a8a9c17e" args="" -->MIT_ADCPRESC8</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189a228de991777d94a9fbee520f4a9027b4"></a><!-- doxytag: member="MIT_ADCPRESC16" ref="a26bf63e64e63ab34b2c66d6fcdbba189a228de991777d94a9fbee520f4a9027b4" args="" -->MIT_ADCPRESC16</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189a19e4c5e990fa0e3e83108b1a2fbdb420"></a><!-- doxytag: member="MIT_ADCPRESC32" ref="a26bf63e64e63ab34b2c66d6fcdbba189a19e4c5e990fa0e3e83108b1a2fbdb420" args="" -->MIT_ADCPRESC32</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189a98cdaf99aea78c97dc94be8b52a4c244"></a><!-- doxytag: member="MIT_ADCPRESC64" ref="a26bf63e64e63ab34b2c66d6fcdbba189a98cdaf99aea78c97dc94be8b52a4c244" args="" -->MIT_ADCPRESC64</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a26bf63e64e63ab34b2c66d6fcdbba189a0efc1aa4282a745805e8eda53f73134a"></a><!-- doxytag: member="MIT_ADCPRESC128" ref="a26bf63e64e63ab34b2c66d6fcdbba189a0efc1aa4282a745805e8eda53f73134a" args="" -->MIT_ADCPRESC128</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c9a4f9a2acd91311975215d577b7a66"></a><!-- doxytag: member="mit_adc.h::MIT_ADCRES" ref="a4c9a4f9a2acd91311975215d577b7a66" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit__adc_8h.html#a4c9a4f9a2acd91311975215d577b7a66">MIT_ADCRES</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Auflösung des AD-Wandlers. </p>
+<p>Es werden immer 10 Bit gewandelt. Bei <code>MIT_BIT8</code> werden die beiden niederwertigsten Bits (0 und 1) nicht berücksichtigt </p>
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a4c9a4f9a2acd91311975215d577b7a66a38fd1368c2a98ea1f0e18d969a850258"></a><!-- doxytag: member="MIT_BIT10" ref="a4c9a4f9a2acd91311975215d577b7a66a38fd1368c2a98ea1f0e18d969a850258" args="" -->MIT_BIT10</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4c9a4f9a2acd91311975215d577b7a66ac8a7cf46dc37d900fe3493356ebcafd1"></a><!-- doxytag: member="MIT_BIT8" ref="a4c9a4f9a2acd91311975215d577b7a66ac8a7cf46dc37d900fe3493356ebcafd1" args="" -->MIT_BIT8</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0638ebe2d6f7ec2cc1edd2a675f3cd2a"></a><!-- doxytag: member="mit_adc.h::MIT_ADCRUNMODE" ref="a0638ebe2d6f7ec2cc1edd2a675f3cd2a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit__adc_8h.html#a0638ebe2d6f7ec2cc1edd2a675f3cd2a">MIT_ADCRUNMODE</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Art der Messung. </p>
+<p>Free Run: Der Wandler startet eine neue Messung, sobald die vorherige Messung abgeschlossen ist.</p>
+<p>Single Shot: Jede Wandlung muß durch Setzen des ADSC-Bits in ADCSRA mit Aufruf von <code><a class="el" href="mit__adc_8h.html#a041d7991a883bf1e5d727926d5a54c10" title="Startet den ADC in folgenden Modi:">MIT_start_ADC()</a></code>) gestartet werden </p>
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a0638ebe2d6f7ec2cc1edd2a675f3cd2aa4fe24defde9e82ee13aa807100343ccc"></a><!-- doxytag: member="MIT_FREERUN" ref="a0638ebe2d6f7ec2cc1edd2a675f3cd2aa4fe24defde9e82ee13aa807100343ccc" args="" -->MIT_FREERUN</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a0638ebe2d6f7ec2cc1edd2a675f3cd2aacdcddf54459e44bf611795828ccd4066"></a><!-- doxytag: member="MIT_SINGLESHOT" ref="a0638ebe2d6f7ec2cc1edd2a675f3cd2aacdcddf54459e44bf611795828ccd4066" args="" -->MIT_SINGLESHOT</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a55a35b0086c7927a33ab98a6e983b5fe"></a><!-- doxytag: member="mit_adc.h::MIT_ADCVREF" ref="a55a35b0086c7927a33ab98a6e983b5fe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit__adc_8h.html#a55a35b0086c7927a33ab98a6e983b5fe">MIT_ADCVREF</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Quelle der Spannungsreferenz <em>(ist auch von Konfiguration des STK500 abhängig.)</em> </p>
+<ul>
+<li><b>AREF:</b> von AREF-Pin; Bei gesetztem Jumper AREF auf dem STK500, wird die Referenzspannung vom STK500 erzeugt und an AREF angelegt. Die Höhe der Referenzspannung kann nur mit dem AVRSTudio eingestellt werden, nicht mit Eclipse. Ist der Jumper nicht gesetzt, muß die Referenzspannung über PORTE Pin 5 zugeführt werden. Sie darf nicht über der Versorgungsspannung liegen.</li>
+<li><b>AVCC:</b> als Referenzspannung wird die Versorgungsspannung verwendet. An AREF muß ein Kondensator angeschlossen werden</li>
+<li><b>INTERN:</b> interne Referenzspannung mit Kondensator an AREF</li>
+</ul>
+<dl class="warning"><dt><b>Warnung:</b></dt><dd>Wenn eine externe Referenzspannungsquelle an AREF angeschlossen ist, dürfen die Modi <b>AVCC</b> und <b>INTERN</b> nicht verwendet werden, da sonst der AREF-Pin über die externe Quelle kurzgeschlossen wird.</dd></dl>
+<p>Überprüfung der eingestellten Spannung vom STK500:</p>
+<ul>
+<li>AVR Studio 4 öffnen</li>
+<li>Tools - Program AVR - Auto Connect</li>
+<li>HW Settings </li>
+</ul>
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a55a35b0086c7927a33ab98a6e983b5feaa7750eda50a6ba685bf4644555e86f58"></a><!-- doxytag: member="MIT_AREF" ref="a55a35b0086c7927a33ab98a6e983b5feaa7750eda50a6ba685bf4644555e86f58" args="" -->MIT_AREF</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a55a35b0086c7927a33ab98a6e983b5fea2e5c9019bc2e15482fe6204ca899b892"></a><!-- doxytag: member="MIT_AVCC" ref="a55a35b0086c7927a33ab98a6e983b5fea2e5c9019bc2e15482fe6204ca899b892" args="" -->MIT_AVCC</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a55a35b0086c7927a33ab98a6e983b5feaff374542ea033ea0a75badc677fa0613"></a><!-- doxytag: member="MIT_INTERN" ref="a55a35b0086c7927a33ab98a6e983b5feaff374542ea033ea0a75badc677fa0613" args="" -->MIT_INTERN</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Funktionen</h2>
+<a class="anchor" id="afb501e126844f361958c21b287e61828"></a><!-- doxytag: member="mit_adc.h::MIT_init_ADC" ref="afb501e126844f361958c21b287e61828" args="(MIT_eADCVREF ref, MIT_eADCCHAN channel, MIT_eADCALIGN align, MIT_eADCPRESC presc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_init_ADC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a86a7354f3c801447b1e6e5b80ff79070">MIT_eADCVREF</a>&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#abbfa7bb12dc3b806f26c71b8d0715f27">MIT_eADCCHAN</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#ac7956d2c2926dad7d0e0109fa563e2fe">MIT_eADCALIGN</a>&#160;</td>
+          <td class="paramname"><em>align</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a1567451bb83d4018610088fe6bff4fed">MIT_eADCPRESC</a>&#160;</td>
+          <td class="paramname"><em>presc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initialisiert den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a>. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ref</td><td>Quelle Referenzspannung </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>Kanal, Symmetrie, Verstärkung </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">align</td><td>Ausrichtung Messergebnis in Ergebnisregister </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">presc</td><td>Wert für Prescaler </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5cce95a41261a72b07cb4880cc564fcb"></a><!-- doxytag: member="mit_adc.h::MIT_init_ADC_INT" ref="a5cce95a41261a72b07cb4880cc564fcb" args="(MIT_eADCVREF ref, MIT_eADCCHAN channel, MIT_eADCALIGN align, MIT_eADCPRESC presc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_init_ADC_INT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a86a7354f3c801447b1e6e5b80ff79070">MIT_eADCVREF</a>&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#abbfa7bb12dc3b806f26c71b8d0715f27">MIT_eADCCHAN</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#ac7956d2c2926dad7d0e0109fa563e2fe">MIT_eADCALIGN</a>&#160;</td>
+          <td class="paramname"><em>align</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a1567451bb83d4018610088fe6bff4fed">MIT_eADCPRESC</a>&#160;</td>
+          <td class="paramname"><em>presc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initialisiert den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> im Interrupt-Modus, verwendet init_ADC() zur Initialisierung. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ref</td><td>Quelle Referenzspannung </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>Kanal, Symmetrie, Verstärkung </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">align</td><td>Ausrichtung Messergebnis in Ergebnisregister </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">presc</td><td>Wert für Prescaler </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="mit__adc_8h_a5cce95a41261a72b07cb4880cc564fcb_cgraph.png" border="0" usemap="#mit__adc_8h_a5cce95a41261a72b07cb4880cc564fcb_cgraph" alt=""/></div>
+<map name="mit__adc_8h_a5cce95a41261a72b07cb4880cc564fcb_cgraph" id="mit__adc_8h_a5cce95a41261a72b07cb4880cc564fcb_cgraph">
+<area shape="rect" id="node3" href="mit__adc_8h.html#afb501e126844f361958c21b287e61828" title="Initialisiert den ADC." alt="" coords="184,5,288,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7dc092e73530ebf239685fca51d4309f"></a><!-- doxytag: member="mit_adc.h::MIT_read_ADC" ref="a7dc092e73530ebf239685fca51d4309f" args="(MIT_eADCRES res)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short MIT_read_ADC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a>&#160;</td>
+          <td class="paramname"><em>res</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>liefert ein Messergebnis (binär) mit 8 oder 10 Bit Auflösung aus </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Auflösung </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>16-Bit-Wert mit Messergebnis in der gewählten Auflösung </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a041d7991a883bf1e5d727926d5a54c10"></a><!-- doxytag: member="mit_adc.h::MIT_start_ADC" ref="a041d7991a883bf1e5d727926d5a54c10" args="(MIT_eADCRUNMODE mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_start_ADC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a4e5deaed5942d27c3ff8eff5abf6ac39">MIT_eADCRUNMODE</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Startet den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> in folgenden Modi: </p>
+<ul>
+<li>MIT_FREERUN: fortlaufende Messung nach Start des <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a></li>
+<li>MIT_SINGLESHOT: einmalige Messung nach Start</li>
+</ul>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="mit__adc_8h.html#a4e5deaed5942d27c3ff8eff5abf6ac39" title="Art der Messung.">MIT_eADCRUNMODE</a> </dd></dl>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Art der Messung </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aea6053b71e71c210129f844bfef6776d"></a><!-- doxytag: member="mit_adc.h::MIT_stop_ADC" ref="aea6053b71e71c210129f844bfef6776d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_stop_ADC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>stoppt den <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="aa8282116d4785481cc29d46ff6e55a12"></a><!-- doxytag: member="mit_adc.h::MIT_ushort2Volt" ref="aa8282116d4785481cc29d46ff6e55a12" args="(unsigned short value, MIT_eADCRES res, float uref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MIT_ushort2Volt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a>&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>uref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>rechnet ein binäres Wandlungsergebnis in einen Spannungswert um </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>binäres Wandlungsergebnis </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Auflösung des Wandlungsergebnisses </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uref</td><td>Spannungsreferenzwert des <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> in V (entspricht Spannung bei maximalem Messwert) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Spannungswert in V </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a972840836bee69234cc76f44e2322010"></a><!-- doxytag: member="mit_adc.h::MIT_ushort2VoltInt" ref="a972840836bee69234cc76f44e2322010" args="(unsigned short value, MIT_eADCRES res, unsigned int uref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int MIT_ushort2VoltInt </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a>&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>uref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>rechnet ein binäres Wandlungsergebnis in einen 4-stelligen Spannungswert in mV um </p>
+<p>Schneller als <a class="el" href="mit__adc_8h.html#aa8282116d4785481cc29d46ff6e55a12" title="rechnet ein binäres Wandlungsergebnis in einen Spannungswert um">MIT_ushort2Volt()</a>, da die aufwändige float-Arithmetik nicht benötigt wird</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>binäres Wandlungsergebnis </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Auflösung des Wandlungsergebnisses </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uref</td><td>Spannungsreferenz des <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> in mV (entspricht Spannung bei maximalem Messwert) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Spannungswert in mV (0 ... 5000 bei 5V Spannungsreferenz) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af540c16dd7bb736898cfbe6415f4abe9"></a><!-- doxytag: member="mit_adc.h::MIT_wait_ADC" ref="af540c16dd7bb736898cfbe6415f4abe9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_wait_ADC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>wartet auf das Ende einer Messung (Polling) </p>
+
+</div>
+</div>
+<hr/><h2>Variablen-Dokumentation</h2>
+<a class="anchor" id="a544fe7d06b38fbc0aa415ffd52cf1739"></a><!-- doxytag: member="mit_adc.h::MIT_gADCres" ref="a544fe7d06b38fbc0aa415ffd52cf1739" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short <a class="el" href="mit__adc_8h.html#a544fe7d06b38fbc0aa415ffd52cf1739">MIT_gADCres</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ergebnis der Wandlung bei interruptgesteuertem <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a>. </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="mit__adc_8h.html">mit_adc.h</a>      </li>
+      <li class="footer">Erzeugt am Wed Jun 18 2014 16:45:41 für libMIT-atmega32 von&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

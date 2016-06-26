@@ -1,0 +1,103 @@
+#include "adc.h"
+#include <avr/io.h>
+// TODO Projekt-Einstellungen
+
+/* schaltet den ADC ein und konfiguriert ihn folgendermaﬂen:
+* fs .....
+* Uref ...
+* etc.
+* Parameter:
+* keine
+* Rueckgabe:
+* keine
+*/
+void init_ADC() {
+	ADCSRA |= (1 << ADEN); // ADC einschalten
+	ADMUX |= (1 << REFS1)|(1 << REFS0); // Spannungsreferenz Uref intern
+	ADMUX |= (0 << ADLAR); // Wandler-Ergebnis rechtsb¸ndig
+	ADMUX |= (0 << MUX4)|(0 << MUX3)|(0 << MUX2)|(0 << MUX1)|(0 << MUX0); // Wandler-Ergebnis rechtsb¸ndig
+	ADCSRA |= (1 << ADPS1)|(1 << ADPS0); // Prescaler setzen
+										//AVCC mit externer Kapazit‰t
+	ADCSRA |= (1 << ADSC); // Starte Wandlung
+}
+
+/* Setzt den Running-Modus und startet die Wandlung
+ * Parameter:
+ * mode
+ * Rueckgabe:
+ * keine
+ */
+void start_ADC(eADCRUNMODE mode) {
+	switch(mode) {
+		case FREERUN:
+			ADCSRA |= (1 << ADFR); // free-running-mode ein
+			break;
+		case SINGLESHOT:
+			ADCSRA |= (0 << ADFR); // single-shot-mode ein
+			break;
+	}
+	ADCSRA |= (1 << ADSC); // Starte Wandlung
+}
+
+/* Stoppt die Wandlung
+ * Parameter:
+ * keine
+ * Rueckgabe:
+ * keine
+ */
+void stop_ADC(){
+	ADCSRA |= (0 << ADFR); // single shot
+}
+
+/* Wartet auf das Ende einer Wandlung
+ * Parameter:
+ * mode
+ * Rueckgabe:
+ * keine
+ */
+void wait_ADC(){
+	while(ADIF == 0){
+		// do nothing
+	}
+	ADCSRA |= (0 << ADIF);
+}
+
+/* Liest den gewandelten 10-Bit-Digitalwert aus
+ * Parameter:
+ * res
+ * Rueckgabe:
+ * unsigned short
+ */
+unsigned short read_ADC(eADCRES res){
+
+}
+
+/* Liefert die niederwertigste Ziffer eines Wertes
+ * Parameter:
+ * *value
+ * Rueckgabe:
+ * unsigned char
+ */
+unsigned char ulong2bcd_unpk(unsigned long* value){
+	unsigned long z;
+	unsigned long r;
+	if(value == 0){
+
+	} else {
+		z = *value%10;
+		r = (*value - z)/10;
+		value = (r)*10+z;
+	}
+	return z;
+}
+
+/* Wandelt einen zweistelligen Wert vom Typ unsgned_long
+ * in eine gepackte BCD-Zahl um
+ * Parameter:
+ * value
+ * Rueckgabe:
+ * unsigned char
+ */
+unsigned char ulong2bcd_pk(unsigned long value){
+
+}

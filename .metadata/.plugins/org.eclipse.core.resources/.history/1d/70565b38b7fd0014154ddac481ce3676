@@ -1,0 +1,52 @@
+#include "adc.h"
+#include <avr/io.h>
+
+/* schaltet den ADC ein und konfiguriert ihn folgendermaßen:
+* fs .....
+* Uref ...
+* etc.
+* Parameter:
+* keine
+* Rückgabe:
+* keine
+*/
+void init_ADC() {
+	ADEN = 1;
+	ADMUX = 0b11000000;
+	ADLAR = 0;
+	MUX = 0;
+	ADEN = 0;
+	ADPS = 0;
+
+}
+
+void start_ADC(eADCRUNMODE mode) {
+	switch(mode)
+	case FREERUN:
+		ADFR = 1;
+	case SINGLESHOT:
+		ADSS = 1;
+}
+
+void stop_ADC(){
+
+}
+
+void wait_ADC(){
+	while(ADIF == 0){
+		// do nothing
+	}
+	ADIF = 1;
+}
+
+unsigned short read_ADC(eADCRES res){
+
+}
+
+unsigned char ulong2bcd_unpk(unsigned long* value){
+
+}
+
+unsigned char ulong2bcd_pk(unsigned long value){
+
+}

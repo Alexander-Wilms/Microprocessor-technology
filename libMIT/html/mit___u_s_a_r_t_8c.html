@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>libMIT-atmega32: Versuch3/mit_USART.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Erzeugt von Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">libMIT-atmega32&#160;<span id="projectnumber">0.3</span></div>
+   <div id="projectbrief">Library MIT-Labor, FB EIT, h_da</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('mit___u_s_a_r_t_8c.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#enum-members">Aufzählungen</a> &#124;
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<div class="title">Versuch3/mit_USART.c-Dateireferenz</div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br/>
+<code>#include &quot;../include/mit_parallel_io.h&quot;</code><br/>
+<code>#include &quot;../include/mit_USART.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für mit_USART.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="mit___u_s_a_r_t_8c__incl.png" border="0" usemap="#_versuch3_2mit___u_s_a_r_t_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a0886798b0b6c1a486170458a302767f1">URSEL</a>&#160;&#160;&#160;7</td></tr>
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+Aufzählungen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762">USART_REGNAMES</a> { <br/>
+&#160;&#160;<a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762a88905bdbf16e78e7798273f6be51bc88">MIT_UBRRxH</a>, 
+<a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762a864a3b5e68f6a289e20bbc7f824dfca0">MIT_UBRRxL</a>, 
+<a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762ac964ccb8219a210bf29290bca489cdc2">MIT_UCSRxA</a>, 
+<a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762ad7184fff83402e1c2db9e6e4916e9769">MIT_UCSRxB</a>, 
+<br/>
+&#160;&#160;<a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762a6242fb844c8c693e1bfa77c8219419b6">MIT_UCSRxC</a>, 
+<a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762ab7ee51ffbf20176af5eca0ada42847f5">MIT_UDRx</a>
+<br/>
+ }</td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a5b9d5e07156b12440511d8a21812bf0b">MIT_init_USART</a> (uint8_t usart_no, unsigned long fcpu, <a class="el" href="mit___u_s_a_r_t_8h.html#ae75754482f945d385105e32be5a572b6">MIT_eBAUDRATE</a> baudrate, <a class="el" href="mit___u_s_a_r_t_8h.html#a733b6a436b40ae8a3b63a748d9e0a653">MIT_eCHARSIZE</a> charsize, <a class="el" href="mit___u_s_a_r_t_8h.html#a1a47243c78b1af7fef8e5210c835418b">MIT_ePARITY</a> parity, <a class="el" href="mit___u_s_a_r_t_8h.html#aeb8e27d9de04c425a6729c475b778dda">MIT_eSTOP</a> stop)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalisiert eine serielle Schnittstelle fuer asynchronen Betrieb mit folgende Parametern.  <a href="#a5b9d5e07156b12440511d8a21812bf0b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a1af0a6f8b45ca630735c8591a1982d13">MIT_putc_USART</a> (unsigned char sendchar)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartet, bis das Senderegister leer ist und versendet dann ein Zeichen über die serielle Schnittstelle.  <a href="#a1af0a6f8b45ca630735c8591a1982d13"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#ad1f44b808a5a6cc2b60433db1e501af1">MIT_getc_USART</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartet solange bis ein Byte (ASCII-Zeichen) über serielle Schnittstelle 0 empfangen wurde (Polling) und liefert es an das aufrufende Programm zurück.  <a href="#ad1f44b808a5a6cc2b60433db1e501af1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a37463b647363ae610ed1f401a12c4613">MIT_lookc_USART</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Schaut nach, ob ein Byte (ASCII-Zeichen) über USART1 empfangen wurde und kehrt sofort zurück falls das nicht der Fall ist.  <a href="#a37463b647363ae610ed1f401a12c4613"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a98f8ad18de7466dc442646f34aa88684">MIT_puts_USART</a> (unsigned char *pMsg)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt einen NULL-terminierten String auf der seriellen Schnittstelle aus.  <a href="#a98f8ad18de7466dc442646f34aa88684"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a4f46b042b100c33dd06eeb70e5c977b5">MIT_ascii2num</a> (unsigned char ascii)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">wandelt ein ASCII Zahlzeichen (0 - 9) in seinen numerischen Wert um  <a href="#a4f46b042b100c33dd06eeb70e5c977b5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a84eb7b0c6233307d5b698b2a009bb20f">MIT_num2ascii</a> (unsigned char numVal)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wandelt einen numerischen Wert (0 - 9) in sein ASCII-Zahlzeichen um.  <a href="#a84eb7b0c6233307d5b698b2a009bb20f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a481669bb23d4bae63ce38518314f17f7">MIT_displayVoltage_PC</a> (unsigned long value, <a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a> res, float uref)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">rechnet einen digitalen Messwert in einen Spannungswert in V um und zeigt diesen mit je einer Stelle vor und nach dem Komma auf dem Serial Terminal des PC an.  <a href="#a481669bb23d4bae63ce38518314f17f7"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">volatile uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#ab6dee3e91fcc802ed605081d401ebcfc">usart</a> [2][6]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="mit___u_s_a_r_t_8c.html">mit_USART.c</a>  <a href="#ab6dee3e91fcc802ed605081d401ebcfc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mit___u_s_a_r_t_8c.html#a795f99d050cf204f756b1905308ee4bb">currentusart</a> = 0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nummer der aktuell mit <a class="el" href="mit___u_s_a_r_t_8h.html#a5b9d5e07156b12440511d8a21812bf0b" title="Initalisiert eine serielle Schnittstelle fuer asynchronen Betrieb mit folgende Parametern.">MIT_init_USART()</a> eingestellten USART-Schnittstelle.  <a href="#a795f99d050cf204f756b1905308ee4bb"></a><br/></td></tr>
+</table>
+<hr/><h2>Makro-Dokumentation</h2>
+<a class="anchor" id="a0886798b0b6c1a486170458a302767f1"></a><!-- doxytag: member="mit_USART.c::URSEL" ref="a0886798b0b6c1a486170458a302767f1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define URSEL&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Aufzählungstypen</h2>
+<a class="anchor" id="aefef6d5382752571a24c9e09383f4762"></a><!-- doxytag: member="mit_USART.c::USART_REGNAMES" ref="aefef6d5382752571a24c9e09383f4762" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mit___u_s_a_r_t_8c.html#aefef6d5382752571a24c9e09383f4762">USART_REGNAMES</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Aufzählungswerte: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="aefef6d5382752571a24c9e09383f4762a88905bdbf16e78e7798273f6be51bc88"></a><!-- doxytag: member="MIT_UBRRxH" ref="aefef6d5382752571a24c9e09383f4762a88905bdbf16e78e7798273f6be51bc88" args="" -->MIT_UBRRxH</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aefef6d5382752571a24c9e09383f4762a864a3b5e68f6a289e20bbc7f824dfca0"></a><!-- doxytag: member="MIT_UBRRxL" ref="aefef6d5382752571a24c9e09383f4762a864a3b5e68f6a289e20bbc7f824dfca0" args="" -->MIT_UBRRxL</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aefef6d5382752571a24c9e09383f4762ac964ccb8219a210bf29290bca489cdc2"></a><!-- doxytag: member="MIT_UCSRxA" ref="aefef6d5382752571a24c9e09383f4762ac964ccb8219a210bf29290bca489cdc2" args="" -->MIT_UCSRxA</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aefef6d5382752571a24c9e09383f4762ad7184fff83402e1c2db9e6e4916e9769"></a><!-- doxytag: member="MIT_UCSRxB" ref="aefef6d5382752571a24c9e09383f4762ad7184fff83402e1c2db9e6e4916e9769" args="" -->MIT_UCSRxB</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aefef6d5382752571a24c9e09383f4762a6242fb844c8c693e1bfa77c8219419b6"></a><!-- doxytag: member="MIT_UCSRxC" ref="aefef6d5382752571a24c9e09383f4762a6242fb844c8c693e1bfa77c8219419b6" args="" -->MIT_UCSRxC</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aefef6d5382752571a24c9e09383f4762ab7ee51ffbf20176af5eca0ada42847f5"></a><!-- doxytag: member="MIT_UDRx" ref="aefef6d5382752571a24c9e09383f4762ab7ee51ffbf20176af5eca0ada42847f5" args="" -->MIT_UDRx</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Dokumentation der Funktionen</h2>
+<a class="anchor" id="a4f46b042b100c33dd06eeb70e5c977b5"></a><!-- doxytag: member="mit_USART.c::MIT_ascii2num" ref="a4f46b042b100c33dd06eeb70e5c977b5" args="(unsigned char ascii)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char MIT_ascii2num </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>ascii</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>wandelt ein ASCII Zahlzeichen (0 - 9) in seinen numerischen Wert um </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ascii</td><td>ASCII Code des Zahlzeichens </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Dezimalwert des ASCII Zeichens </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a481669bb23d4bae63ce38518314f17f7"></a><!-- doxytag: member="mit_USART.c::MIT_displayVoltage_PC" ref="a481669bb23d4bae63ce38518314f17f7" args="(unsigned long value, MIT_eADCRES res, float uref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_displayVoltage_PC </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit__adc_8h.html#a80bd7a36cbe815867c8655ede5c9154f">MIT_eADCRES</a>&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>uref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>rechnet einen digitalen Messwert in einen Spannungswert in V um und zeigt diesen mit je einer Stelle vor und nach dem Komma auf dem Serial Terminal des PC an. </p>
+<p>Jeder Messwert soll in einer Zeile dargestellt werden, z.B.:</p>
+<p><code>0.2V</code> </p>
+<p><code>1.7V</code> </p>
+<p>u.s.w.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>binäres Wandelergebnis </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Auflösung des Messwerts </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uref</td><td>Referenzspannung des <a class="el" href="namespace_a_d_c.html" title="AD Wandler (Versuch 2)">ADC</a> in Volt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="mit___u_s_a_r_t_8c_a481669bb23d4bae63ce38518314f17f7_cgraph.png" border="0" usemap="#mit___u_s_a_r_t_8c_a481669bb23d4bae63ce38518314f17f7_cgraph" alt=""/></div>
+<map name="mit___u_s_a_r_t_8c_a481669bb23d4bae63ce38518314f17f7_cgraph" id="mit___u_s_a_r_t_8c_a481669bb23d4bae63ce38518314f17f7_cgraph">
+<area shape="rect" id="node3" href="mit___u_s_a_r_t_8h.html#a84eb7b0c6233307d5b698b2a009bb20f" title="Wandelt einen numerischen Wert (0 &#45; 9) in sein ASCII&#45;Zahlzeichen um." alt="" coords="241,5,356,35"/><area shape="rect" id="node5" href="mit___u_s_a_r_t_8h.html#a1af0a6f8b45ca630735c8591a1982d13" title="Wartet, bis das Senderegister leer ist und versendet dann ein Zeichen über die serielle Schnittstelle..." alt="" coords="236,59,361,88"/><area shape="rect" id="node7" href="mit__parallel__io_8h.html#a6a9e92900990945c6aff73d2238a947f" title="niederwertigste Ziffer eines ganzzahligen Wertes als ungepackte BCD&#45;Zahl" alt="" coords="221,112,376,141"/><area shape="rect" id="node9" href="mit__adc_8h.html#aa8282116d4785481cc29d46ff6e55a12" title="rechnet ein binäres Wandlungsergebnis in einen Spannungswert um" alt="" coords="237,165,360,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1f44b808a5a6cc2b60433db1e501af1"></a><!-- doxytag: member="mit_USART.c::MIT_getc_USART" ref="ad1f44b808a5a6cc2b60433db1e501af1" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char MIT_getc_USART </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Wartet solange bis ein Byte (ASCII-Zeichen) über serielle Schnittstelle 0 empfangen wurde (Polling) und liefert es an das aufrufende Programm zurück. </p>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>empfangenes Zeichen </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b9d5e07156b12440511d8a21812bf0b"></a><!-- doxytag: member="mit_USART.c::MIT_init_USART" ref="a5b9d5e07156b12440511d8a21812bf0b" args="(uint8_t usart_no, unsigned long fcpu, MIT_eBAUDRATE baudrate, MIT_eCHARSIZE charsize, MIT_ePARITY parity, MIT_eSTOP stop)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_init_USART </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>usart_no</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>fcpu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit___u_s_a_r_t_8h.html#ae75754482f945d385105e32be5a572b6">MIT_eBAUDRATE</a>&#160;</td>
+          <td class="paramname"><em>baudrate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit___u_s_a_r_t_8h.html#a733b6a436b40ae8a3b63a748d9e0a653">MIT_eCHARSIZE</a>&#160;</td>
+          <td class="paramname"><em>charsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit___u_s_a_r_t_8h.html#a1a47243c78b1af7fef8e5210c835418b">MIT_ePARITY</a>&#160;</td>
+          <td class="paramname"><em>parity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mit___u_s_a_r_t_8h.html#aeb8e27d9de04c425a6729c475b778dda">MIT_eSTOP</a>&#160;</td>
+          <td class="paramname"><em>stop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initalisiert eine serielle Schnittstelle fuer asynchronen Betrieb mit folgende Parametern. </p>
+<ul>
+<li>Baudrate</li>
+<li>Anzahl Datenbits</li>
+<li>Anzahl Stopbits</li>
+<li>Parity NONE/ODD/EVEN</li>
+</ul>
+<p>Bit U2X wird immer auf 0 gesetzt (keine Frequenzverdopplung).</p>
+<p>Es wird die Schnittstelle initialisiert, die in usart_no angegeben wird, die vorher aktive Schnittstelle wird deaktiviert.</p>
+<p>Alle anderen Funktionen von libMIT verwenden dann die aktive Schnittstelle.</p>
+<p>Um während des Betriebs die Schnittstelle zu wechseln muss MIT_init_USART mit einem anderen Wert für usart_no aufgerufen werden.</p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">usart_no</td><td>Nummer der <a class="el" href="namespace_u_s_a_r_t.html" title="Funktionen serielle Schnittstellen (Versuch 3)">USART</a> Schnittstelle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fcpu</td><td>Systemfrequenz in Hz </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">baudrate</td><td>Baudrate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">charsize</td><td>Anzahl Datenbits (5,6,7 oder 8) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parity</td><td>Parityprüfung (keine, gerade, ungerade) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stop</td><td>Anzahl Stopbits (1 oder 2) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a37463b647363ae610ed1f401a12c4613"></a><!-- doxytag: member="mit_USART.c::MIT_lookc_USART" ref="a37463b647363ae610ed1f401a12c4613" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char MIT_lookc_USART </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Schaut nach, ob ein Byte (ASCII-Zeichen) über USART1 empfangen wurde und kehrt sofort zurück falls das nicht der Fall ist. </p>
+<p>Falls kein empfangenes Zeichen bereitsteht wird 0xff zurueckgegeben.</p>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>empfangenes Zeichen </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a84eb7b0c6233307d5b698b2a009bb20f"></a><!-- doxytag: member="mit_USART.c::MIT_num2ascii" ref="a84eb7b0c6233307d5b698b2a009bb20f" args="(unsigned char numVal)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char MIT_num2ascii </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>numVal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Wandelt einen numerischen Wert (0 - 9) in sein ASCII-Zahlzeichen um. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numVal</td><td>Numerischer Wert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>ASCII Code des Zahlzeichens </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1af0a6f8b45ca630735c8591a1982d13"></a><!-- doxytag: member="mit_USART.c::MIT_putc_USART" ref="a1af0a6f8b45ca630735c8591a1982d13" args="(unsigned char sendchar)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_putc_USART </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>sendchar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Wartet, bis das Senderegister leer ist und versendet dann ein Zeichen über die serielle Schnittstelle. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sendchar</td><td>zu sendendes Zeichen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a98f8ad18de7466dc442646f34aa88684"></a><!-- doxytag: member="mit_USART.c::MIT_puts_USART" ref="a98f8ad18de7466dc442646f34aa88684" args="(unsigned char *pMsg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MIT_puts_USART </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gibt einen NULL-terminierten String auf der seriellen Schnittstelle aus. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pMsg</td><td>Zeiger auf Anfangsadresse String </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="mit___u_s_a_r_t_8c_a98f8ad18de7466dc442646f34aa88684_cgraph.png" border="0" usemap="#mit___u_s_a_r_t_8c_a98f8ad18de7466dc442646f34aa88684_cgraph" alt=""/></div>
+<map name="mit___u_s_a_r_t_8c_a98f8ad18de7466dc442646f34aa88684_cgraph" id="mit___u_s_a_r_t_8c_a98f8ad18de7466dc442646f34aa88684_cgraph">
+<area shape="rect" id="node3" href="mit___u_s_a_r_t_8h.html#a1af0a6f8b45ca630735c8591a1982d13" title="Wartet, bis das Senderegister leer ist und versendet dann ein Zeichen über die serielle Schnittstelle..." alt="" coords="183,5,308,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>Variablen-Dokumentation</h2>
+<a class="anchor" id="a795f99d050cf204f756b1905308ee4bb"></a><!-- doxytag: member="mit_USART.c::currentusart" ref="a795f99d050cf204f756b1905308ee4bb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t <a class="el" href="mit___u_s_a_r_t_8c.html#a795f99d050cf204f756b1905308ee4bb">currentusart</a> = 0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nummer der aktuell mit <a class="el" href="mit___u_s_a_r_t_8h.html#a5b9d5e07156b12440511d8a21812bf0b" title="Initalisiert eine serielle Schnittstelle fuer asynchronen Betrieb mit folgende Parametern.">MIT_init_USART()</a> eingestellten USART-Schnittstelle. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab6dee3e91fcc802ed605081d401ebcfc"></a><!-- doxytag: member="mit_USART.c::usart" ref="ab6dee3e91fcc802ed605081d401ebcfc" args="[2][6]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t* <a class="el" href="mit___u_s_a_r_t_8c.html#ab6dee3e91fcc802ed605081d401ebcfc">usart</a>[2][6]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><pre class="fragment">{{(<span class="keyword">volatile</span> uint8_t *)0x40,(<span class="keyword">volatile</span> uint8_t *)0x29,(<span class="keyword">volatile</span> uint8_t *)0x2B,(<span class="keyword">volatile</span> uint8_t *)0x2A,(<span class="keyword">volatile</span> uint8_t *)0x40,(<span class="keyword">volatile</span> uint8_t *)0x2C},
+                {(<span class="keyword">volatile</span> uint8_t *)0x40,(<span class="keyword">volatile</span> uint8_t *)0x29,(<span class="keyword">volatile</span> uint8_t *)0x2B,(<span class="keyword">volatile</span> uint8_t *)0x2A,(<span class="keyword">volatile</span> uint8_t *)0x40,(<span class="keyword">volatile</span> uint8_t *)0x2C}}
+</pre></div>
+<p><a class="el" href="mit___u_s_a_r_t_8c.html">mit_USART.c</a> </p>
+<dl class="author"><dt><b>Autor:</b></dt><dd>H. Frank - FB EIT - h_da  2012 by FB EIT - h_da Registeradressen <a class="el" href="namespace_u_s_a_r_t.html" title="Funktionen serielle Schnittstellen (Versuch 3)">USART</a>: UBRRxH,UBRRxL,UCSRxA,UCSRxB,UCSRxC,UDRx</dd></dl>
+<p>Die Adressen sind zweifach abgebildet, damit MIT_USART_init mit USART-Nummer 0 und 1 korrekte Werte erhält </p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="mit___u_s_a_r_t_8c.html">mit_USART.c</a>      </li>
+      <li class="footer">Erzeugt am Wed Jun 18 2014 16:45:42 für libMIT-atmega32 von&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Dateien</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typdefinitionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Aufzählungen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Aufzählungswerte</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Makrodefinitionen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

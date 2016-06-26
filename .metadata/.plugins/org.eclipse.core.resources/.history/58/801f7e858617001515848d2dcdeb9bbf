@@ -1,0 +1,62 @@
+#include "timer.h"
+#include <avr/io.h>
+
+/*
+* Konfiguriert den Waveform Generation Mode des Timer0 in Abhängigkeit vom übergebenen Parameterwert. Der Typ des
+* Parameters soll wie im ADC-Versuch als Aufzählungstyp (enum) definiert werden (siehe auch entsprechende Hinweise zu
+* Versuch 2).
+* Hinweis: Die Einstellung des Prescalers soll erst beim Start des Timers erfolgen (siehe unten).
+* Parameter:
+* mode
+* einzustellender Waveform Generation Mode
+* TMODE_NORMAL ... Normal-Modus, Timer zählt bis 255 im nächsten Zählschritt beginnt er durch
+* Überlauf erneut bei 0
+* TMODE_CTC ...... Clear-Timer-on-Compare-Match-Modus, Timer zählt bis zu dem Wert, der im
+* OCR0-Register eingestellt ist und beginnt im nächsten Schritt erneut bei 0
+*/
+void init_Timer0(eTIMERMODE mode){
+
+}
+
+/*
+* Durch Einstellung des Prescalers kann der Timer gestartet oder gestoppt werden (siehe Datenblatt S. 106). Die Funktion
+* startet den Timer durch Setzen des Prescalers entsprechend dem übergebenen Wert. Da der Prescaler nicht auf jeden
+* beliebigen Wert gesetzt werden kann, übernimmt die Funktion einen enum-Wert, anhand dessen die Funktion eindeutig
+* feststellen kann, welcher der existierenden Prescaler-Werte gesetzt werden soll.
+* Hinweis: Werden die enum-Werte so definiert, dass sie den Bit-Mustern aus der Tabelle im Datenblatt S. 106 entsprechen,
+* reduziert sich der Programmieraufwand für die Funktion auf eine Zeile Code, z.B. PRESC128 hat den enum-Wert 5.
+*/
+void start_Timer0(ePRESCALER prescaler){
+
+}
+
+/*
+ * Stoppt den Timer, indem sie den Prescaler auf 0 setzt (siehe Datenblatt S. 106).
+ */
+void stop_Timer0(){
+
+}
+
+/*
+ * Setzt den Timer zurück, indem sie das TCNT0-Register auf 0 setzt.
+ */
+void clear_Timer0(){
+
+}
+
+/*
+* Wartet durch Polling darauf, dass die eingestellte Zeit abgelaufen ist. Im NORMAL-Modus, setzt der Timer bei Ablauf der
+* Zeit das TOV0-Bit, im CTC-Modus das OCF0-Bit. Das jeweilige Bit muss dann wieder zurückgesetzt werden.
+* Hinweis: Zum Rücksetzen des jeweiligen Bits auf 0 muss eine 1 in das Bit geschrieben werden (siehe auch Datenblatt)!
+*/
+void wait_Timer0(eTIMERMODE mode){
+
+}
+
+/*
+* Setzt das OCR0-Register (Output Compare Register) des Timers auf den übergebenen Wert. Im CTC-Modus zählt der Timer
+* bis zu diesem Wert, setzt das OCF0-Bit und beginnt dann das Zählen wieder bei 0.
+*/
+void setOCRval_Timer0(unsigned char ocrval){
+
+}

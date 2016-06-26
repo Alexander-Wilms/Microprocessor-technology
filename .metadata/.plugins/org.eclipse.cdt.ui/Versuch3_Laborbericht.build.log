@@ -1,0 +1,20 @@
+17:17:00 **** Incremental Build of configuration Debug for project Versuch3_Laborbericht ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 Versuch3_Laborbericht.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:    6246 bytes (4.8% Full)
+(.text + .data + .bootloader)
+
+Data:        580 bytes (14.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:17:00 Build Finished (took 175ms)
+

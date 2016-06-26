@@ -1,0 +1,212 @@
+
+Versuch0_C.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00000138  000001ac  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000138  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         00000624  00000000  00000000  000001ac  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000bfa  00000000  00000000  000007d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .comment      00000027  00000000  00000000  000013ca  2**0
+                  CONTENTS, READONLY
+  5 .debug_info   00000780  00000000  00000000  000013f1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000718  00000000  00000000  00001b71  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000001d  00000000  00000000  00002289  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000027d  00000000  00000000  000022a6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   8:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  10:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  14:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  18:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  1c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  20:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  24:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  28:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  2c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  30:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  34:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  38:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  3c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  40:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  44:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  48:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  4c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  50:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  54:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  58:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  5c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  60:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  64:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  68:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  6c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  70:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  74:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  78:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  7c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  80:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  84:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  88:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	0e 94 52 00 	call	0xa4	; 0xa4 <main>
+  9c:	0c 94 9a 00 	jmp	0x134	; 0x134 <_exit>
+
+000000a0 <__bad_interrupt>:
+  a0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a4 <main>:
+#define CNT_WAITLOOPS 2
+
+void wait();
+
+int main(void)
+{
+  a4:	cf 93       	push	r28
+  a6:	df 93       	push	r29
+  a8:	1f 92       	push	r1
+  aa:	cd b7       	in	r28, 0x3d	; 61
+  ac:	de b7       	in	r29, 0x3e	; 62
+	/*char D;
+	D = A+B-C;*/
+
+	DDRB=0xff;
+  ae:	87 e3       	ldi	r24, 0x37	; 55
+  b0:	90 e0       	ldi	r25, 0x00	; 0
+  b2:	2f ef       	ldi	r18, 0xFF	; 255
+  b4:	fc 01       	movw	r30, r24
+  b6:	20 83       	st	Z, r18
+	//PORTB= ~D;
+
+	unsigned char lauf=1;
+  b8:	81 e0       	ldi	r24, 0x01	; 1
+  ba:	89 83       	std	Y+1, r24	; 0x01
+	PORTB = lauf;
+  bc:	88 e3       	ldi	r24, 0x38	; 56
+  be:	90 e0       	ldi	r25, 0x00	; 0
+  c0:	29 81       	ldd	r18, Y+1	; 0x01
+  c2:	fc 01       	movw	r30, r24
+  c4:	20 83       	st	Z, r18
+
+	while(1) //Endlosschleife
+	{
+		if (PORTB == 0) lauf = 1;
+  c6:	88 e3       	ldi	r24, 0x38	; 56
+  c8:	90 e0       	ldi	r25, 0x00	; 0
+  ca:	fc 01       	movw	r30, r24
+  cc:	80 81       	ld	r24, Z
+  ce:	88 23       	and	r24, r24
+  d0:	11 f4       	brne	.+4      	; 0xd6 <main+0x32>
+  d2:	81 e0       	ldi	r24, 0x01	; 1
+  d4:	89 83       	std	Y+1, r24	; 0x01
+		lauf = lauf << 1;
+  d6:	89 81       	ldd	r24, Y+1	; 0x01
+  d8:	88 0f       	add	r24, r24
+  da:	89 83       	std	Y+1, r24	; 0x01
+		PORTB = lauf;
+  dc:	88 e3       	ldi	r24, 0x38	; 56
+  de:	90 e0       	ldi	r25, 0x00	; 0
+  e0:	29 81       	ldd	r18, Y+1	; 0x01
+  e2:	fc 01       	movw	r30, r24
+  e4:	20 83       	st	Z, r18
+		wait();
+  e6:	0e 94 76 00 	call	0xec	; 0xec <wait>
+	}
+  ea:	ed cf       	rjmp	.-38     	; 0xc6 <main+0x22>
+
+000000ec <wait>:
+}
+
+void wait()
+{
+  ec:	cf 93       	push	r28
+  ee:	df 93       	push	r29
+  f0:	00 d0       	rcall	.+0      	; 0xf2 <wait+0x6>
+  f2:	1f 92       	push	r1
+  f4:	cd b7       	in	r28, 0x3d	; 61
+  f6:	de b7       	in	r29, 0x3e	; 62
+	unsigned char cntLoops = CNT_WAITLOOPS;
+  f8:	82 e0       	ldi	r24, 0x02	; 2
+  fa:	89 83       	std	Y+1, r24	; 0x01
+	unsigned int nwait = 0xffff;
+  fc:	8f ef       	ldi	r24, 0xFF	; 255
+  fe:	9f ef       	ldi	r25, 0xFF	; 255
+ 100:	9b 83       	std	Y+3, r25	; 0x03
+ 102:	8a 83       	std	Y+2, r24	; 0x02
+	while(cntLoops != 0)
+ 104:	0d c0       	rjmp	.+26     	; 0x120 <wait+0x34>
+	{
+		while(nwait != 0)
+ 106:	05 c0       	rjmp	.+10     	; 0x112 <wait+0x26>
+		{
+			nwait--;
+ 108:	8a 81       	ldd	r24, Y+2	; 0x02
+ 10a:	9b 81       	ldd	r25, Y+3	; 0x03
+ 10c:	01 97       	sbiw	r24, 0x01	; 1
+ 10e:	9b 83       	std	Y+3, r25	; 0x03
+ 110:	8a 83       	std	Y+2, r24	; 0x02
+{
+	unsigned char cntLoops = CNT_WAITLOOPS;
+	unsigned int nwait = 0xffff;
+	while(cntLoops != 0)
+	{
+		while(nwait != 0)
+ 112:	8a 81       	ldd	r24, Y+2	; 0x02
+ 114:	9b 81       	ldd	r25, Y+3	; 0x03
+ 116:	00 97       	sbiw	r24, 0x00	; 0
+ 118:	b9 f7       	brne	.-18     	; 0x108 <wait+0x1c>
+		{
+			nwait--;
+		}
+		cntLoops--;
+ 11a:	89 81       	ldd	r24, Y+1	; 0x01
+ 11c:	81 50       	subi	r24, 0x01	; 1
+ 11e:	89 83       	std	Y+1, r24	; 0x01
+
+void wait()
+{
+	unsigned char cntLoops = CNT_WAITLOOPS;
+	unsigned int nwait = 0xffff;
+	while(cntLoops != 0)
+ 120:	89 81       	ldd	r24, Y+1	; 0x01
+ 122:	88 23       	and	r24, r24
+ 124:	81 f7       	brne	.-32     	; 0x106 <wait+0x1a>
+		{
+			nwait--;
+		}
+		cntLoops--;
+	}
+	return;
+ 126:	00 00       	nop
+}
+ 128:	0f 90       	pop	r0
+ 12a:	0f 90       	pop	r0
+ 12c:	0f 90       	pop	r0
+ 12e:	df 91       	pop	r29
+ 130:	cf 91       	pop	r28
+ 132:	08 95       	ret
+
+00000134 <_exit>:
+ 134:	f8 94       	cli
+
+00000136 <__stop_program>:
+ 136:	ff cf       	rjmp	.-2      	; 0x136 <__stop_program>

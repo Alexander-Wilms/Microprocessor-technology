@@ -1,0 +1,57 @@
+
+AssemblerTest.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000004  00800100  0000005c  000000d0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000005c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000001a4  00000000  00000000  000000d4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000023  00000000  00000000  00000278  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__ctors_end>:
+   0:	0f ef       	ldi	r16, 0xFF	; 255
+   2:	00 93 5d 00 	sts	0x005D, r16
+   6:	00 e1       	ldi	r16, 0x10	; 16
+   8:	00 93 5e 00 	sts	0x005E, r16
+   c:	00 91 00 01 	lds	r16, 0x0100
+  10:	10 91 01 01 	lds	r17, 0x0101
+  14:	01 0f       	add	r16, r17
+  16:	00 93 00 01 	sts	0x0100, r16
+  1a:	10 91 02 01 	lds	r17, 0x0102
+  1e:	01 1b       	sub	r16, r17
+  20:	00 93 00 01 	sts	0x0100, r16
+  24:	1f ef       	ldi	r17, 0xFF	; 255
+  26:	10 93 37 00 	sts	0x0037, r17
+  2a:	00 95       	com	r16
+  2c:	00 93 38 00 	sts	0x0038, r16
+  30:	81 e0       	ldi	r24, 0x01	; 1
+  32:	80 95       	com	r24
+  34:	08 94       	sec
+
+00000036 <loop>:
+  36:	80 93 38 00 	sts	0x0038, r24
+  3a:	88 1f       	adc	r24, r24
+  3c:	0e 94 22 00 	call	0x44	; 0x44 <wait>
+  40:	0c 94 1b 00 	jmp	0x36	; 0x36 <loop>
+
+00000044 <wait>:
+  44:	b0 91 5f 00 	lds	r27, 0x005F
+  48:	a2 e0       	ldi	r26, 0x02	; 2
+
+0000004a <next_wait>:
+  4a:	82 e0       	ldi	r24, 0x02	; 2
+  4c:	90 e0       	ldi	r25, 0x00	; 0
+
+0000004e <wait_loop>:
+  4e:	01 97       	sbiw	r24, 0x01	; 1
+  50:	f1 f7       	brne	.-4      	; 0x4e <wait_loop>
+  52:	aa 95       	dec	r26
+  54:	d1 f7       	brne	.-12     	; 0x4a <next_wait>
+  56:	b0 93 5f 00 	sts	0x005F, r27
+  5a:	08 95       	ret

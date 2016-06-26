@@ -1,0 +1,85 @@
+13:08:14 **** Incremental Build of configuration Debug for project AssemblerTest ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 AssemblerTest.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:      96 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:08:18 **** Incremental Build of configuration Debug for project AssemblerTest ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 AssemblerTest.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:      96 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:21:16 **** Incremental Build of configuration Debug for project AssemblerTest ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 AssemblerTest.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:      96 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:22:03 **** Incremental Build of configuration Debug for project AssemblerTest ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 AssemblerTest.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:      96 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:23:58 **** Incremental Build of configuration Debug for project AssemblerTest ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 AssemblerTest.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:      96 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          4 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

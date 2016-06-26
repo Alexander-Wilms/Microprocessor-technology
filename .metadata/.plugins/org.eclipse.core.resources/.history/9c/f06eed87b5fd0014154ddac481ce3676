@@ -1,0 +1,38 @@
+#include "adc.h"
+#include <avr/io.h>
+
+void init_ADC() {
+	ADMUX = 0b11000000;
+	ADLAR = 0;
+	MUX = 0;
+	ADEN = 0;
+	ADPS = 0;
+
+}
+
+void start_ADC(eADCRUNMODE mode) {
+	switch()
+	case FREERUN
+
+	case SINGLESHOT
+}
+
+void stop_ADC(){
+
+}
+
+void wait_ADC(){
+
+}
+
+unsigned short read_ADC(eADCRES res){
+
+}
+
+unsigned char ulong2bcd_unpk(unsigned long* value){
+
+}
+
+unsigned char ulong2bcd_pk(unsigned long value){
+
+}

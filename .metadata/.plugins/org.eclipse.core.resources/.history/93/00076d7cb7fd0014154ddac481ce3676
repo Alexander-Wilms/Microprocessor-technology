@@ -1,0 +1,10 @@
+// Bindet ein h-File ein, in dem alle IO-Adressen und Konstanten
+// f?r den eingestellten Prozessor definiert sind z.B. DDRB, PORTB,
+// PIND, PIND3 (3. Bit im IO-Register PIND) etc.
+#include <avr/io.h>			// AVR header file for IO ports
+
+int main(void)
+{
+	while (1) {
+	}
+}

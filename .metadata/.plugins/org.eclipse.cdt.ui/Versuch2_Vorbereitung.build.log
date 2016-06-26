@@ -1,0 +1,42 @@
+17:46:13 **** Incremental Build of configuration Debug for project Versuch2_Vorbereitung ****
+make all 
+Building file: ../myCode/adc.c
+Invoking: AVR Compiler
+avr-gcc -I/home/mit/MIT-workspace/libMIT/include -Wall -g3 -gstabs+ -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega128 -DF_CPU=4000000UL -MMD -MP -MF"myCode/adc.d" -MT"myCode/adc.d" -c -o "myCode/adc.o" "../myCode/adc.c"
+Finished building: ../myCode/adc.c
+ 
+Building target: Versuch2_Vorbereitung.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Versuch2_Vorbereitung.map -L/home/mit/MIT-workspace/libMIT -mmcu=atmega128 -o "Versuch2_Vorbereitung.elf"  ./myCode/adc.o ./myCode/main.o   -lMIT
+Finished building target: Versuch2_Vorbereitung.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Versuch2_Vorbereitung.elf  >"Versuch2_Vorbereitung.lss"
+Finished building: Versuch2_Vorbereitung.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Versuch2_Vorbereitung.elf  "Versuch2_Vorbereitung.hex"
+Finished building: Versuch2_Vorbereitung.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Versuch2_Vorbereitung.elf  "Versuch2_Vorbereitung.eep"
+Finished building: Versuch2_Vorbereitung.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega128 Versuch2_Vorbereitung.elf
+AVR Memory Usage
+----------------
+Device: atmega128
+
+Program:    1210 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:46:14 Build Finished (took 239ms)
+

@@ -1,0 +1,569 @@
+
+Versuch3_Vorbereitung.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000000c2  00800100  0000032c  000003a0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000032c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         00000d08  00000000  00000000  00000464  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000cd3  00000000  00000000  0000116c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .comment      00000027  00000000  00000000  00001e3f  2**0
+                  CONTENTS, READONLY
+  5 .debug_info   00000780  00000000  00000000  00001e66  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000718  00000000  00000000  000025e6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000001d  00000000  00000000  00002cfe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000027d  00000000  00000000  00002d1b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ec e2       	ldi	r30, 0x2C	; 44
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 3c       	cpi	r26, 0xC2	; 194
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	0e 94 25 01 	call	0x24a	; 0x24a <main>
+  b6:	0c 94 94 01 	jmp	0x328	; 0x328 <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <init_USART1>:
+ * Parameter:
+ * keine
+ * Rückgabewert:
+ * keiner
+ */
+void init_USART1() {
+  be:	cf 93       	push	r28
+  c0:	df 93       	push	r29
+  c2:	cd b7       	in	r28, 0x3d	; 61
+  c4:	de b7       	in	r29, 0x3e	; 62
+	// siehe S. 193 im Datenblatt
+	// Konfiguration der Baud-Rate von 9600 Baud
+	UBRR1L = 25;
+  c6:	89 e9       	ldi	r24, 0x99	; 153
+  c8:	90 e0       	ldi	r25, 0x00	; 0
+  ca:	29 e1       	ldi	r18, 0x19	; 25
+  cc:	fc 01       	movw	r30, r24
+  ce:	20 83       	st	Z, r18
+	UBRR1H = 0;
+  d0:	88 e9       	ldi	r24, 0x98	; 152
+  d2:	90 e0       	ldi	r25, 0x00	; 0
+  d4:	fc 01       	movw	r30, r24
+  d6:	10 82       	st	Z, r1
+	// Sender einschalten
+	// \/ können nicht geschrieben werden
+	UCSR1B |= (1<<TXEN1);
+  d8:	8a e9       	ldi	r24, 0x9A	; 154
+  da:	90 e0       	ldi	r25, 0x00	; 0
+  dc:	2a e9       	ldi	r18, 0x9A	; 154
+  de:	30 e0       	ldi	r19, 0x00	; 0
+  e0:	f9 01       	movw	r30, r18
+  e2:	20 81       	ld	r18, Z
+  e4:	28 60       	ori	r18, 0x08	; 8
+  e6:	fc 01       	movw	r30, r24
+  e8:	20 83       	st	Z, r18
+	// Empfänger einschalten
+	UCSR1B |= (1<<RXEN1);
+  ea:	8a e9       	ldi	r24, 0x9A	; 154
+  ec:	90 e0       	ldi	r25, 0x00	; 0
+  ee:	2a e9       	ldi	r18, 0x9A	; 154
+  f0:	30 e0       	ldi	r19, 0x00	; 0
+  f2:	f9 01       	movw	r30, r18
+  f4:	20 81       	ld	r18, Z
+  f6:	20 61       	ori	r18, 0x10	; 16
+  f8:	fc 01       	movw	r30, r24
+  fa:	20 83       	st	Z, r18
+	// 8 Datenbits
+	// UCSR1B |= (1<<UCSZ11)|(1<<UCSZ10);
+	// 2 Stopbits
+	UCSR1C |= (1<<USBS1);
+  fc:	8d e9       	ldi	r24, 0x9D	; 157
+  fe:	90 e0       	ldi	r25, 0x00	; 0
+ 100:	2d e9       	ldi	r18, 0x9D	; 157
+ 102:	30 e0       	ldi	r19, 0x00	; 0
+ 104:	f9 01       	movw	r30, r18
+ 106:	20 81       	ld	r18, Z
+ 108:	28 60       	ori	r18, 0x08	; 8
+ 10a:	fc 01       	movw	r30, r24
+ 10c:	20 83       	st	Z, r18
+	// keine Parität
+	// UCSR1C |= (0<<UPM10)|(0<<UPM11);
+	// asynchroner Modus
+	// UCSR1C |= (0<<UMSEL1);
+}
+ 10e:	df 91       	pop	r29
+ 110:	cf 91       	pop	r28
+ 112:	08 95       	ret
+
+00000114 <putc_USART1>:
+ * Parameter:
+ * data
+ * Rückgabewert:
+ * keiner
+ */
+void putc_USART1(unsigned char data) {
+ 114:	cf 93       	push	r28
+ 116:	df 93       	push	r29
+ 118:	00 d0       	rcall	.+0      	; 0x11a <putc_USART1+0x6>
+ 11a:	1f 92       	push	r1
+ 11c:	cd b7       	in	r28, 0x3d	; 61
+ 11e:	de b7       	in	r29, 0x3e	; 62
+ 120:	8b 83       	std	Y+3, r24	; 0x03
+	int done = 0;
+ 122:	1a 82       	std	Y+2, r1	; 0x02
+ 124:	19 82       	std	Y+1, r1	; 0x01
+	while(!done) {
+ 126:	13 c0       	rjmp	.+38     	; 0x14e <putc_USART1+0x3a>
+		// Sende-Statusregister des USART1 abfragen
+		if(UCSR1A & (1<<UDRE1)) {
+ 128:	8b e9       	ldi	r24, 0x9B	; 155
+ 12a:	90 e0       	ldi	r25, 0x00	; 0
+ 12c:	fc 01       	movw	r30, r24
+ 12e:	80 81       	ld	r24, Z
+ 130:	88 2f       	mov	r24, r24
+ 132:	90 e0       	ldi	r25, 0x00	; 0
+ 134:	80 72       	andi	r24, 0x20	; 32
+ 136:	99 27       	eor	r25, r25
+ 138:	00 97       	sbiw	r24, 0x00	; 0
+ 13a:	49 f0       	breq	.+18     	; 0x14e <putc_USART1+0x3a>
+			// schreibe in Datenregister für Sende-Daten
+			UDR1 = data;
+ 13c:	8c e9       	ldi	r24, 0x9C	; 156
+ 13e:	90 e0       	ldi	r25, 0x00	; 0
+ 140:	2b 81       	ldd	r18, Y+3	; 0x03
+ 142:	fc 01       	movw	r30, r24
+ 144:	20 83       	st	Z, r18
+			done = 1;
+ 146:	81 e0       	ldi	r24, 0x01	; 1
+ 148:	90 e0       	ldi	r25, 0x00	; 0
+ 14a:	9a 83       	std	Y+2, r25	; 0x02
+ 14c:	89 83       	std	Y+1, r24	; 0x01
+ * Rückgabewert:
+ * keiner
+ */
+void putc_USART1(unsigned char data) {
+	int done = 0;
+	while(!done) {
+ 14e:	89 81       	ldd	r24, Y+1	; 0x01
+ 150:	9a 81       	ldd	r25, Y+2	; 0x02
+ 152:	00 97       	sbiw	r24, 0x00	; 0
+ 154:	49 f3       	breq	.-46     	; 0x128 <putc_USART1+0x14>
+			// schreibe in Datenregister für Sende-Daten
+			UDR1 = data;
+			done = 1;
+		}
+	}
+}
+ 156:	0f 90       	pop	r0
+ 158:	0f 90       	pop	r0
+ 15a:	0f 90       	pop	r0
+ 15c:	df 91       	pop	r29
+ 15e:	cf 91       	pop	r28
+ 160:	08 95       	ret
+
+00000162 <getc_USART1>:
+ * Parameter:
+ * keine
+ * Rückgabewert:
+ * empfangenes Zeichen
+ */
+unsigned char getc_USART1(void) {
+ 162:	cf 93       	push	r28
+ 164:	df 93       	push	r29
+ 166:	00 d0       	rcall	.+0      	; 0x168 <getc_USART1+0x6>
+ 168:	1f 92       	push	r1
+ 16a:	cd b7       	in	r28, 0x3d	; 61
+ 16c:	de b7       	in	r29, 0x3e	; 62
+	unsigned char a;
+	int done = 0;
+ 16e:	1b 82       	std	Y+3, r1	; 0x03
+ 170:	1a 82       	std	Y+2, r1	; 0x02
+	while(!done) {
+ 172:	0f c0       	rjmp	.+30     	; 0x192 <getc_USART1+0x30>
+		// Empfangs-Statusregister des USART1 abfragen
+		if(UCSR1A & (1<<RXC1)) {
+ 174:	8b e9       	ldi	r24, 0x9B	; 155
+ 176:	90 e0       	ldi	r25, 0x00	; 0
+ 178:	fc 01       	movw	r30, r24
+ 17a:	80 81       	ld	r24, Z
+ 17c:	88 23       	and	r24, r24
+ 17e:	4c f4       	brge	.+18     	; 0x192 <getc_USART1+0x30>
+			// lese Datenregister für empfangene Daten
+			a = UDR1;
+ 180:	8c e9       	ldi	r24, 0x9C	; 156
+ 182:	90 e0       	ldi	r25, 0x00	; 0
+ 184:	fc 01       	movw	r30, r24
+ 186:	80 81       	ld	r24, Z
+ 188:	89 83       	std	Y+1, r24	; 0x01
+			done = 1;
+ 18a:	81 e0       	ldi	r24, 0x01	; 1
+ 18c:	90 e0       	ldi	r25, 0x00	; 0
+ 18e:	9b 83       	std	Y+3, r25	; 0x03
+ 190:	8a 83       	std	Y+2, r24	; 0x02
+ * empfangenes Zeichen
+ */
+unsigned char getc_USART1(void) {
+	unsigned char a;
+	int done = 0;
+	while(!done) {
+ 192:	8a 81       	ldd	r24, Y+2	; 0x02
+ 194:	9b 81       	ldd	r25, Y+3	; 0x03
+ 196:	00 97       	sbiw	r24, 0x00	; 0
+ 198:	69 f3       	breq	.-38     	; 0x174 <getc_USART1+0x12>
+			// lese Datenregister für empfangene Daten
+			a = UDR1;
+			done = 1;
+		}
+	}
+	return a;
+ 19a:	89 81       	ldd	r24, Y+1	; 0x01
+}
+ 19c:	0f 90       	pop	r0
+ 19e:	0f 90       	pop	r0
+ 1a0:	0f 90       	pop	r0
+ 1a2:	df 91       	pop	r29
+ 1a4:	cf 91       	pop	r28
+ 1a6:	08 95       	ret
+
+000001a8 <lookc_USART1>:
+ * keine
+ * Rückgabewert:
+ * 255		nichts empfangen
+ * sonst	empfangenes Zeichen
+ */
+unsigned char lookc_USART1(void) {
+ 1a8:	cf 93       	push	r28
+ 1aa:	df 93       	push	r29
+ 1ac:	1f 92       	push	r1
+ 1ae:	cd b7       	in	r28, 0x3d	; 61
+ 1b0:	de b7       	in	r29, 0x3e	; 62
+	unsigned char a;
+	// lese Datenregister für empfangene Daten
+	if(UCSR1A & (1<<RXC1)) {
+ 1b2:	8b e9       	ldi	r24, 0x9B	; 155
+ 1b4:	90 e0       	ldi	r25, 0x00	; 0
+ 1b6:	fc 01       	movw	r30, r24
+ 1b8:	80 81       	ld	r24, Z
+ 1ba:	88 23       	and	r24, r24
+ 1bc:	3c f4       	brge	.+14     	; 0x1cc <lookc_USART1+0x24>
+		a = UDR1;
+ 1be:	8c e9       	ldi	r24, 0x9C	; 156
+ 1c0:	90 e0       	ldi	r25, 0x00	; 0
+ 1c2:	fc 01       	movw	r30, r24
+ 1c4:	80 81       	ld	r24, Z
+ 1c6:	89 83       	std	Y+1, r24	; 0x01
+		return a;
+ 1c8:	89 81       	ldd	r24, Y+1	; 0x01
+ 1ca:	01 c0       	rjmp	.+2      	; 0x1ce <lookc_USART1+0x26>
+	} else {
+		return 255;
+ 1cc:	8f ef       	ldi	r24, 0xFF	; 255
+	}
+}
+ 1ce:	0f 90       	pop	r0
+ 1d0:	df 91       	pop	r29
+ 1d2:	cf 91       	pop	r28
+ 1d4:	08 95       	ret
+
+000001d6 <puts_USART1>:
+ * Parameter:
+ * pStr
+ * Rückgabewert:
+ * keiner
+ */
+void puts_USART1(unsigned char *pStr) {
+ 1d6:	cf 93       	push	r28
+ 1d8:	df 93       	push	r29
+ 1da:	00 d0       	rcall	.+0      	; 0x1dc <puts_USART1+0x6>
+ 1dc:	cd b7       	in	r28, 0x3d	; 61
+ 1de:	de b7       	in	r29, 0x3e	; 62
+ 1e0:	9a 83       	std	Y+2, r25	; 0x02
+ 1e2:	89 83       	std	Y+1, r24	; 0x01
+	while(*pStr != 0x00) {
+ 1e4:	0b c0       	rjmp	.+22     	; 0x1fc <puts_USART1+0x26>
+		putc_USART1(*pStr);
+ 1e6:	89 81       	ldd	r24, Y+1	; 0x01
+ 1e8:	9a 81       	ldd	r25, Y+2	; 0x02
+ 1ea:	fc 01       	movw	r30, r24
+ 1ec:	80 81       	ld	r24, Z
+ 1ee:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+		pStr++;
+ 1f2:	89 81       	ldd	r24, Y+1	; 0x01
+ 1f4:	9a 81       	ldd	r25, Y+2	; 0x02
+ 1f6:	01 96       	adiw	r24, 0x01	; 1
+ 1f8:	9a 83       	std	Y+2, r25	; 0x02
+ 1fa:	89 83       	std	Y+1, r24	; 0x01
+ * pStr
+ * Rückgabewert:
+ * keiner
+ */
+void puts_USART1(unsigned char *pStr) {
+	while(*pStr != 0x00) {
+ 1fc:	89 81       	ldd	r24, Y+1	; 0x01
+ 1fe:	9a 81       	ldd	r25, Y+2	; 0x02
+ 200:	fc 01       	movw	r30, r24
+ 202:	80 81       	ld	r24, Z
+ 204:	88 23       	and	r24, r24
+ 206:	79 f7       	brne	.-34     	; 0x1e6 <puts_USART1+0x10>
+		putc_USART1(*pStr);
+		pStr++;
+	}
+}
+ 208:	0f 90       	pop	r0
+ 20a:	0f 90       	pop	r0
+ 20c:	df 91       	pop	r29
+ 20e:	cf 91       	pop	r28
+ 210:	08 95       	ret
+
+00000212 <ascii2num>:
+ * Parameter:
+ * data
+ * Rückgabewert:
+ * Dezimal-Ziffer
+ */
+unsigned int ascii2num(unsigned char data) {
+ 212:	cf 93       	push	r28
+ 214:	df 93       	push	r29
+ 216:	1f 92       	push	r1
+ 218:	cd b7       	in	r28, 0x3d	; 61
+ 21a:	de b7       	in	r29, 0x3e	; 62
+ 21c:	89 83       	std	Y+1, r24	; 0x01
+	return (unsigned int) data - 48;
+ 21e:	89 81       	ldd	r24, Y+1	; 0x01
+ 220:	88 2f       	mov	r24, r24
+ 222:	90 e0       	ldi	r25, 0x00	; 0
+ 224:	c0 97       	sbiw	r24, 0x30	; 48
+}
+ 226:	0f 90       	pop	r0
+ 228:	df 91       	pop	r29
+ 22a:	cf 91       	pop	r28
+ 22c:	08 95       	ret
+
+0000022e <num2ascii>:
+ * Parameter:
+ * data
+ * Rückgabewert:
+ * ASCII-Code der Ziffer
+ */
+unsigned char num2ascii(unsigned int data) {
+ 22e:	cf 93       	push	r28
+ 230:	df 93       	push	r29
+ 232:	00 d0       	rcall	.+0      	; 0x234 <num2ascii+0x6>
+ 234:	cd b7       	in	r28, 0x3d	; 61
+ 236:	de b7       	in	r29, 0x3e	; 62
+ 238:	9a 83       	std	Y+2, r25	; 0x02
+ 23a:	89 83       	std	Y+1, r24	; 0x01
+	return (unsigned char) data + 48;
+ 23c:	89 81       	ldd	r24, Y+1	; 0x01
+ 23e:	80 5d       	subi	r24, 0xD0	; 208
+}
+ 240:	0f 90       	pop	r0
+ 242:	0f 90       	pop	r0
+ 244:	df 91       	pop	r29
+ 246:	cf 91       	pop	r28
+ 248:	08 95       	ret
+
+0000024a <main>:
+// PIND, PIND3 (3. Bit im IO-Register PIND) etc.
+#include <avr/io.h>			// AVR header file for IO ports
+#include "USART1.h"
+
+int main(void)
+{
+ 24a:	cf 93       	push	r28
+ 24c:	df 93       	push	r29
+ 24e:	cd b7       	in	r28, 0x3d	; 61
+ 250:	de b7       	in	r29, 0x3e	; 62
+ 252:	29 97       	sbiw	r28, 0x09	; 9
+ 254:	0f b6       	in	r0, 0x3f	; 63
+ 256:	f8 94       	cli
+ 258:	de bf       	out	0x3e, r29	; 62
+ 25a:	0f be       	out	0x3f, r0	; 63
+ 25c:	cd bf       	out	0x3d, r28	; 61
+	init_USART1();
+ 25e:	0e 94 5f 00 	call	0xbe	; 0xbe <init_USART1>
+
+	puts_USART1("First string\n\r");
+ 262:	80 e0       	ldi	r24, 0x00	; 0
+ 264:	91 e0       	ldi	r25, 0x01	; 1
+ 266:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	puts_USART1("First char: ");
+ 26a:	8f e0       	ldi	r24, 0x0F	; 15
+ 26c:	91 e0       	ldi	r25, 0x01	; 1
+ 26e:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	putc_USART1('a');
+ 272:	81 e6       	ldi	r24, 0x61	; 97
+ 274:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+	puts_USART1("\n\r");
+ 278:	8c e1       	ldi	r24, 0x1C	; 28
+ 27a:	91 e0       	ldi	r25, 0x01	; 1
+ 27c:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+
+	puts_USART1("Waiting for input...\n\r");
+ 280:	8f e1       	ldi	r24, 0x1F	; 31
+ 282:	91 e0       	ldi	r25, 0x01	; 1
+ 284:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	unsigned char a = getc_USART1();
+ 288:	0e 94 b1 00 	call	0x162	; 0x162 <getc_USART1>
+ 28c:	8b 83       	std	Y+3, r24	; 0x03
+	putc_USART1('\n');
+ 28e:	8a e0       	ldi	r24, 0x0A	; 10
+ 290:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+	putc_USART1('\r');
+ 294:	8d e0       	ldi	r24, 0x0D	; 13
+ 296:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+	puts_USART1("The char you typed is\n\r");
+ 29a:	86 e3       	ldi	r24, 0x36	; 54
+ 29c:	91 e0       	ldi	r25, 0x01	; 1
+ 29e:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	putc_USART1(a);
+ 2a2:	8b 81       	ldd	r24, Y+3	; 0x03
+ 2a4:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+
+	unsigned char b = lookc_USART1();
+ 2a8:	0e 94 d4 00 	call	0x1a8	; 0x1a8 <lookc_USART1>
+ 2ac:	89 87       	std	Y+9, r24	; 0x09
+	puts_USART1("\n\rIf you are too slow this will be ASCII char 255\n\r");
+ 2ae:	8e e4       	ldi	r24, 0x4E	; 78
+ 2b0:	91 e0       	ldi	r25, 0x01	; 1
+ 2b2:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	putc_USART1(b);
+ 2b6:	89 85       	ldd	r24, Y+9	; 0x09
+ 2b8:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+	puts_USART1("\n\rThis as well\n\r");
+ 2bc:	82 e8       	ldi	r24, 0x82	; 130
+ 2be:	91 e0       	ldi	r25, 0x01	; 1
+ 2c0:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	unsigned char* c = &b;
+ 2c4:	ce 01       	movw	r24, r28
+ 2c6:	09 96       	adiw	r24, 0x09	; 9
+ 2c8:	9d 83       	std	Y+5, r25	; 0x05
+ 2ca:	8c 83       	std	Y+4, r24	; 0x04
+	puts_USART1(c);
+ 2cc:	8c 81       	ldd	r24, Y+4	; 0x04
+ 2ce:	9d 81       	ldd	r25, Y+5	; 0x05
+ 2d0:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+
+	puts_USART1("\n\r\'5\' converted to an integer\n\r");
+ 2d4:	83 e9       	ldi	r24, 0x93	; 147
+ 2d6:	91 e0       	ldi	r25, 0x01	; 1
+ 2d8:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	unsigned int d = ascii2num('5');
+ 2dc:	85 e3       	ldi	r24, 0x35	; 53
+ 2de:	0e 94 09 01 	call	0x212	; 0x212 <ascii2num>
+ 2e2:	9f 83       	std	Y+7, r25	; 0x07
+ 2e4:	8e 83       	std	Y+6, r24	; 0x06
+	for(int i = 1; i<= d; i++)
+ 2e6:	81 e0       	ldi	r24, 0x01	; 1
+ 2e8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ea:	9a 83       	std	Y+2, r25	; 0x02
+ 2ec:	89 83       	std	Y+1, r24	; 0x01
+ 2ee:	08 c0       	rjmp	.+16     	; 0x300 <main+0xb6>
+	putc_USART1('I');
+ 2f0:	89 e4       	ldi	r24, 0x49	; 73
+ 2f2:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+	unsigned char* c = &b;
+	puts_USART1(c);
+
+	puts_USART1("\n\r\'5\' converted to an integer\n\r");
+	unsigned int d = ascii2num('5');
+	for(int i = 1; i<= d; i++)
+ 2f6:	89 81       	ldd	r24, Y+1	; 0x01
+ 2f8:	9a 81       	ldd	r25, Y+2	; 0x02
+ 2fa:	01 96       	adiw	r24, 0x01	; 1
+ 2fc:	9a 83       	std	Y+2, r25	; 0x02
+ 2fe:	89 83       	std	Y+1, r24	; 0x01
+ 300:	29 81       	ldd	r18, Y+1	; 0x01
+ 302:	3a 81       	ldd	r19, Y+2	; 0x02
+ 304:	8e 81       	ldd	r24, Y+6	; 0x06
+ 306:	9f 81       	ldd	r25, Y+7	; 0x07
+ 308:	82 17       	cp	r24, r18
+ 30a:	93 07       	cpc	r25, r19
+ 30c:	88 f7       	brcc	.-30     	; 0x2f0 <main+0xa6>
+	putc_USART1('I');
+
+	puts_USART1("\n\rAn ASCII 5\n\r");
+ 30e:	83 eb       	ldi	r24, 0xB3	; 179
+ 310:	91 e0       	ldi	r25, 0x01	; 1
+ 312:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <puts_USART1>
+	unsigned char e = num2ascii(5);
+ 316:	85 e0       	ldi	r24, 0x05	; 5
+ 318:	90 e0       	ldi	r25, 0x00	; 0
+ 31a:	0e 94 17 01 	call	0x22e	; 0x22e <num2ascii>
+ 31e:	88 87       	std	Y+8, r24	; 0x08
+	putc_USART1(e);
+ 320:	88 85       	ldd	r24, Y+8	; 0x08
+ 322:	0e 94 8a 00 	call	0x114	; 0x114 <putc_USART1>
+
+	while (1) {
+	}
+ 326:	ff cf       	rjmp	.-2      	; 0x326 <main+0xdc>
+
+00000328 <_exit>:
+ 328:	f8 94       	cli
+
+0000032a <__stop_program>:
+ 32a:	ff cf       	rjmp	.-2      	; 0x32a <__stop_program>

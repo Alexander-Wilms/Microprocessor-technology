@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$mit___u_s_a_r_t_8h.html#a84eb7b0c6233307d5b698b2a009bb20f" title="Wandelt einen numerischen Wert (0 &#45; 9) in sein ASCII&#45;Zahlzeichen um." alt="" coords="241,5,356,35"/>
+<area shape="rect" id="node5" href="$mit___u_s_a_r_t_8h.html#a1af0a6f8b45ca630735c8591a1982d13" title="Wartet, bis das Senderegister leer ist und versendet dann ein Zeichen über die serielle Schnittstelle..." alt="" coords="236,59,361,88"/>
+<area shape="rect" id="node7" href="$mit__parallel__io_8h.html#a6a9e92900990945c6aff73d2238a947f" title="niederwertigste Ziffer eines ganzzahligen Wertes als ungepackte BCD&#45;Zahl" alt="" coords="221,112,376,141"/>
+<area shape="rect" id="node9" href="$mit__adc_8h.html#aa8282116d4785481cc29d46ff6e55a12" title="rechnet ein binäres Wandlungsergebnis in einen Spannungswert um" alt="" coords="237,165,360,195"/>
+</map>

@@ -1,0 +1,101 @@
+#include "adc.h"
+#include <avr/io.h>
+
+/* schaltet den ADC ein und konfiguriert ihn folgendermaﬂen:
+* fs .....
+* Uref ...
+* etc.
+* Parameter:
+* keine
+* Rueckgabe:
+* keine
+*/
+void init_ADC() {
+	ADCSRA = 0b10000000; //ADEN = 0b1;
+	ADMUX = 0b11000000;
+	ADLAR = 0;
+	MUX = 0;
+	ADEN = 0;
+	ADPS = 0;
+
+}
+
+/*
+ * Parameter:
+ * mode
+ * Rueckgabe:
+ * keine
+ */
+void start_ADC(eADCRUNMODE mode) {
+	switch(mode) {
+		case FREERUN:
+			ADFR = 1;
+			break;
+		case SINGLESHOT:
+			ADSS = 1;
+			break;
+	}
+	ADSC = 1; // Start conversion
+}
+
+/*
+ * Parameter:
+ * keine
+ * Rueckgabe:
+ * keine
+ */
+void stop_ADC(){
+	ADFR = 1; // single shot
+}
+
+/*
+ * Parameter:
+ * mode
+ * Rueckgabe:
+ * keine
+ */
+void wait_ADC(){
+	while(ADIF == 0){
+		// do nothing
+	}
+	ADIF = 1;
+}
+
+/*
+ * Parameter:
+ * res
+ * Rueckgabe:
+ * unsigned short
+ */
+unsigned short read_ADC(eADCRES res){
+
+}
+
+/*
+ * Parameter:
+ * *value
+ * Rueckgabe:
+ * unsigned char
+ */
+unsigned char ulong2bcd_unpk(unsigned long* value){
+	unsigned long z;
+	unsigned long r;
+	if(value == 0){
+
+	} else {
+		z = *value%10;
+		r = (*value - z)/10;
+		value = (r)*10+z;
+	}
+	return z;
+}
+
+/*
+ * Parameter:
+ * value
+ * Rueckgabe:
+ * unsigned char
+ */
+unsigned char ulong2bcd_pk(unsigned long value){
+
+}

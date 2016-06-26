@@ -1,0 +1,238 @@
+
+Versuch1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000d0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000000d0  00000144  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         00000408  00000000  00000000  00000144  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      0000004c  00000000  00000000  0000054c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__ctors_end>:
+   0:	0f e5       	ldi	r16, 0x5F	; 95
+   2:	00 93 5d 00 	sts	0x005D, r16
+   6:	04 e0       	ldi	r16, 0x04	; 4
+   8:	00 93 5e 00 	sts	0x005E, r16
+   c:	0e 94 15 00 	call	0x2a	; 0x2a <initPorts_Ain_Bout>
+  10:	0e 94 48 00 	call	0x90	; 0x90 <wait4key_A>
+  14:	81 e0       	ldi	r24, 0x01	; 1
+  16:	0e 94 26 00 	call	0x4c	; 0x4c <putByteLED_B>
+  1a:	78 ee       	ldi	r23, 0xE8	; 232
+  1c:	0e 94 29 00 	call	0x52	; 0x52 <wait_ms>
+  20:	80 e0       	ldi	r24, 0x00	; 0
+  22:	0e 94 26 00 	call	0x4c	; 0x4c <putByteLED_B>
+
+00000026 <doNothing>:
+  26:	0c 94 13 00 	jmp	0x26	; 0x26 <doNothing>
+
+0000002a <initPorts_Ain_Bout>:
+* lokal: r16 - Hilfsregister
+* Parameter: keine
+* Rückgabe: keine
+*/
+initPorts_Ain_Bout: ; alles puschn, was kein parameter ist, und verwendet wird
+	push r16 ; Inhalt von r16 retten
+  2a:	0f 93       	push	r16
+	lds r16, SREG ; Inhalt des Flagregisters retten
+  2c:	00 91 5f 00 	lds	r16, 0x005F
+	push r16
+  30:	0f 93       	push	r16
+
+	ldi r16, 0x00	; A IN
+  32:	00 e0       	ldi	r16, 0x00	; 0
+	out DDRA, r16
+  34:	0a bf       	out	0x3a, r16	; 58
+	ldi r16, 0xff	; Pull-Ups
+  36:	0f ef       	ldi	r16, 0xFF	; 255
+	out PORTA, r16
+  38:	0b bf       	out	0x3b, r16	; 59
+
+	ldi r16, 0xff	; B OUT
+  3a:	0f ef       	ldi	r16, 0xFF	; 255
+	out DDRB, r16
+  3c:	07 bf       	out	0x37, r16	; 55
+	ldi r16, 0xff	; HIGH => LEDs aus
+  3e:	0f ef       	ldi	r16, 0xFF	; 255
+	out PORTB, r16
+  40:	08 bf       	out	0x38, r16	; 56
+
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+  42:	0f 91       	pop	r16
+	sts SREG, r16
+  44:	00 93 5f 00 	sts	0x005F, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+  48:	0f 91       	pop	r16
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+  4a:	08 95       	ret
+
+0000004c <putByteLED_B>:
+putByteLED_B:
+	;push r16 ; Inhalt von r16 retten
+	;lds r16, SREG ; Inhalt des Flagregisters retten
+	;push r16
+
+	com r24 ; Soll leuchten, wo eine 1 war
+  4c:	80 95       	com	r24
+	out PORTB, r24
+  4e:	88 bf       	out	0x38, r24	; 56
+
+	;pop r16 	; Inhalt des Flagregisters wiederherstellen
+	;sts SREG, r16
+	;pop r16 ; Inhalt von r16 wiederherstellen
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+  50:	08 95       	ret
+
+00000052 <wait_ms>:
+* lokal: r24,r25,r26,r27
+* Parameter: r23
+* Rückgabe: keine
+*/
+wait_ms:
+	push r16 ; Inhalt von r16 retten
+  52:	0f 93       	push	r16
+	lds r16, SREG ; Inhalt des Flagregisters retten
+  54:	00 91 5f 00 	lds	r16, 0x005F
+	push r16
+  58:	0f 93       	push	r16
+	push r24
+  5a:	8f 93       	push	r24
+	push r25
+  5c:	9f 93       	push	r25
+	push r26
+  5e:	af 93       	push	r26
+	push r27
+  60:	bf 93       	push	r27
+
+	;ldi r23 = 0x64
+	call wait
+  62:	0e 94 3c 00 	call	0x78	; 0x78 <wait>
+
+	pop r27
+  66:	bf 91       	pop	r27
+	pop r26
+  68:	af 91       	pop	r26
+	pop r25
+  6a:	9f 91       	pop	r25
+	pop r24
+  6c:	8f 91       	pop	r24
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+  6e:	0f 91       	pop	r16
+	sts SREG, r16
+  70:	00 93 5f 00 	sts	0x005F, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+  74:	0f 91       	pop	r16
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+  76:	08 95       	ret
+
+00000078 <wait>:
+
+wait:
+	lds r27, SREG
+  78:	b0 91 5f 00 	lds	r27, 0x005F
+	mov r26, r23 	; wie oft soll der 16-Bitwert in r25:r24
+  7c:	a7 2f       	mov	r26, r23
+
+0000007e <next_wait>:
+						; auf 0 heruntergezählt werden? (Wartezähler laden)
+next_wait:
+	ldi r24, 0xe8 		; lädt den Startwert der inneren Zählschleife -> 1 ms
+  7e:	88 ee       	ldi	r24, 0xE8	; 232
+	ldi r25, 0x03
+  80:	93 e0       	ldi	r25, 0x03	; 3
+
+00000082 <wait_loop>:
+
+wait_loop:
+	sbiw r24,1			; zähle 2 Byte-Zahl runter
+  82:	01 97       	sbiw	r24, 0x01	; 1
+	brne wait_loop 		; wenn nicht bei 0, springt wieder zu wait_loop
+  84:	f1 f7       	brne	.-4      	; 0x82 <wait_loop>
+	dec r26 			; wenn ja, dekrementiert den Wartezähler
+  86:	aa 95       	dec	r26
+	brne next_wait 		; wenn nicht 0 => Sprung zum erneuten Herunterzählen
+  88:	d1 f7       	brne	.-12     	; 0x7e <next_wait>
+						; des 16-Bit-Wertes
+	sts SREG, r27
+  8a:	b0 93 5f 00 	sts	0x005F, r27
+	ret 				; kehrt zum aufrufenden Programm zurück
+  8e:	08 95       	ret
+
+00000090 <wait4key_A>:
+* lokal: r16, r23 - Hilfsregister
+* Parameter: keine
+* Rückgabe: r22
+*/
+wait4key_A:
+	push r16 ; Inhalt von r16 retten
+  90:	0f 93       	push	r16
+	lds r16, SREG ; Inhalt des Flagregisters retten
+  92:	00 91 5f 00 	lds	r16, 0x005F
+	push r16
+  96:	0f 93       	push	r16
+
+00000098 <wait_loop_key>:
+
+	wait_loop_key:
+		lds r16, PINA
+  98:	00 91 39 00 	lds	r16, 0x0039
+		cpi r16, 0xff ; nicht gedrückt?
+  9c:	0f 3f       	cpi	r16, 0xFF	; 255
+		breq wait_loop_key
+  9e:	e1 f3       	breq	.-8      	; 0x98 <wait_loop_key>
+
+	lds r22, PINA ; Tastencode zurückgeben
+  a0:	60 91 39 00 	lds	r22, 0x0039
+	ldi r23, 0x0a ; warte 10 ms
+  a4:	7a e0       	ldi	r23, 0x0A	; 10
+	call wait_ms
+  a6:	0e 94 29 00 	call	0x52	; 0x52 <wait_ms>
+
+000000aa <wait4keyrelease>:
+
+	wait4keyrelease:
+		lds r16, PINA
+  aa:	00 91 39 00 	lds	r16, 0x0039
+		cpi r16, 0xff ; nicht gedrückt?
+  ae:	0f 3f       	cpi	r16, 0xFF	; 255
+		brne wait4keyrelease ; wenn nicht gedrückt, wiederhole
+  b0:	e1 f7       	brne	.-8      	; 0xaa <wait4keyrelease>
+
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+  b2:	0f 91       	pop	r16
+	sts SREG, r16
+  b4:	00 93 5f 00 	sts	0x005F, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+  b8:	0f 91       	pop	r16
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+  ba:	08 95       	ret
+
+000000bc <toggle_bit>:
+r16 - Hilfsregister
+* Parameter: keine
+* Rückgabe: keine
+*/
+toggle_bit:
+	push r16 ; Inhalt von r16 retten
+  bc:	0f 93       	push	r16
+	lds r16, SREG ; Inhalt des Flagregisters retten
+  be:	00 91 5f 00 	lds	r16, 0x005F
+	push r16
+  c2:	0f 93       	push	r16
+
+	eor r21, r20 // XOR
+  c4:	54 27       	eor	r21, r20
+
+	pop r16 	; Inhalt des Flagregisters wiederherstellen
+  c6:	0f 91       	pop	r16
+	sts SREG, r16
+  c8:	00 93 5f 00 	sts	0x005F, r16
+	pop r16 ; Inhalt von r16 wiederherstellen
+  cc:	0f 91       	pop	r16
+	ret ; die Funktion kehrt zum aufrufenden Programm zurück
+  ce:	08 95       	ret

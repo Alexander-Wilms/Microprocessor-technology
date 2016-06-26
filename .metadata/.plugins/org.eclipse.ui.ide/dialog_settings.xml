@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/home/mit/Downloads/Versuch5_Labor.zip"/>
+			<item value="/home/mit/Downloads/Versuch4_Laborende.zip"/>
+			<item value="/home/mit/Downloads/Versuch3_Durchfuehrung.zip"/>
+			<item value="/home/mit/Downloads/Versuch2_Ende.zip"/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+			<item value="org.eclipse.ui.workingSets"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.cdt.ui.wizards.NewCWizard2" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.cdt.ui.newCWizards"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="50" key="DIALOG_X_ORIGIN"/>
+		<item value="248" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="700" key="DIALOG_WIDTH"/>
+		<item value="1|DejaVu Sans|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="602" key="DIALOG_HEIGHT"/>
+		<item value="450" key="DIALOG_X_ORIGIN"/>
+		<item value="135" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
